@@ -3,11 +3,46 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
 }
 
-body.warm-theme {
-  filter: sepia(0.1) brightness(1.05) contrast(0.95);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Global font settings */
+body {
+    font-family: 'Inter', 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111;
+}
+
+/* Buttons and emphasized text */
+button, strong {
+    font-family: 'Open Sans', 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Example code or small labels */
+code, kbd, samp {
+    font-family: 'Courier New', monospace;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background: linear-gradient(87deg, #3F1D38,#3F1D38,#AF5279,#FFD6A5);
+  filter: sepia(.001) brightness(1.05) contrast(1.4);
 }
 
 .Home {
@@ -72,6 +107,10 @@ body.warm-theme {
 
 .link {
   margin-left: 35px;
+}
+.home-link{
+  background: transparent;
+  border: none;
 }
 
 .link a {
