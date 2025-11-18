@@ -23,7 +23,7 @@ function Projects() {
           <h3>My first Website</h3>
 
           <p>
-            A responsive portfolio website built with HTML, CSS , JavaScript to showcase my skills,
+            A responsive website built with HTML, CSS , JavaScript to showcase my skills,
             projects, and contact information.
           </p>
           <button className="btn"><a href="https://bishnuneupane0.kesug.com" target="_blank" rel="noopener noreferrer">View Project</a></button>
@@ -34,7 +34,7 @@ function Projects() {
           <p>
             I am working on more exciting projects! Stay tuned for updates.
           </p>
-          <button className="btn"><a href="../../notfound" target="_blank" rel="noopener noreferrer">View Project</a></button>
+          <button className="btn"><a href="notfound" target="_blank" rel="noopener noreferrer">View Project</a></button>
         </div>
           <div className="project-item">
              <img src={comingsoon} alt="Project 3" />
