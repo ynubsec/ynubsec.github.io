@@ -1,6 +1,6 @@
 
 
-function Projects() {
+function Project() {
     return (
         <>
         <div className='projects' id="projects">
@@ -15,4 +15,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default Project;

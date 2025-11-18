@@ -11,18 +11,8 @@
 /* Global font settings */
 body {
     font-family: 'Inter', 'Open Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #222;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', 'Inter', sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #111;
-}
 
 /* Buttons and emphasized text */
 button, strong {
@@ -30,10 +20,6 @@ button, strong {
     font-weight: 600;
 }
 
-/* Example code or small labels */
-code, kbd, samp {
-    font-family: 'Courier New', monospace;
-}
 
 
 html {
