@@ -580,7 +580,7 @@ body{
 /* ---------------- VS CODE TEXT BLOCK ---------------- */
 .code-block {
   font-family: "Consolas", "Courier New", monospace;
-  background: linear-gradient(to right, #3F1D38, #AF5279, #FFD6A5);
+  background: linear-gradient(230deg, #3F1D38, #AF5279, #AF5279);
   color: #FFD6A5;
   padding: 22px;
   border-radius: 14px;

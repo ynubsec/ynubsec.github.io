@@ -1,4 +1,4 @@
-
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Project() {
     return (
@@ -8,7 +8,7 @@ function Project() {
           Welcome to my project portfolio! Here you’ll find a curated selection
           of work that highlights my passion for coding, web development, and cybersecurity.
         </p>
-        <button className="btn">View Projects</button>
+        <button className="btn" ><Link to="/projects"> View Projects</Link></button>
       </div>
 
       </>
