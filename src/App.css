@@ -206,7 +206,7 @@ body.warm-theme {
 .hero-img2 {
   width: 320px;
   height: 320px;
-  border-radius: 30px;
+
   overflow: hidden;
   border: 4px solid rgba(255,214,165,0.3);
   display: flex;
@@ -217,8 +217,12 @@ body.warm-theme {
 }
 
 .hero-img2 {
+    border-radius: 40px;
   margin-left: 20px;
   width: auto;
+}
+.hero-img{
+    border-radius: 50%;
 }
 
 .hero-img img,
@@ -575,11 +579,16 @@ body.warm-theme {
 
 /* ------------------- RESPONSIVE DESIGN --------------------- */
 
-
+@media (min-width: 1000px) {
+  .hero{
+    flex-direction: row;
+  }
+}
 
 /* Large tablets and smaller laptops (max-width: 1280px) */
 @media (max-width: 1280px) {
   .hero {
+    flex-direction: row;
     padding: 120px 80px;
   }
 

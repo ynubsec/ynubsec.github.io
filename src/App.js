@@ -93,7 +93,7 @@ function App() {
         <div className="about-content" style={{ display: "flex", alignItems: "center", gap: "20px", marginTop: "20px" }}>
           
           <div className="hero-img2">
-            <img src={pic} alt="Profile" />
+            <img src={image4} alt="Profile" />
           </div>
 
           {/* --- VS CODE STYLE BLOCK HERE --- */}
@@ -132,8 +132,8 @@ function App() {
 
           <div className="photos">
             <img src={image3} style={{ marginLeft: "300px" }} alt="img1" />
-            <img src={image4} alt="img2" />
-            <img src={logo} alt="img3" />
+            <img src={logo} alt="img2" />
+            <img src={image4} alt="img3" />
             <img src={pic} alt="img4" />
             <img src={image2} alt="img5" />
             <img src={image1} alt="img6" />
