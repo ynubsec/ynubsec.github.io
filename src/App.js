@@ -10,6 +10,8 @@ import Skills from './components/navs/skills.js';
 import Footer from './components/footer.js';
 import Nav from './components/navbar.js';
 import Maps from './components/maps.js'
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 import './App.css';
 import Photos from "./components/photos.js";
@@ -65,6 +67,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Pro />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
