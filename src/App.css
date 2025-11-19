@@ -516,7 +516,7 @@ body{
   border-bottom: 2px solid #AF5279;
 }
 
-/* Policy links row (Privacy / Terms) */
+
 .Rules {
   margin-top: 12px;
   display: inline-flex;
@@ -561,7 +561,7 @@ body{
   }
 }
 
-/* Policy page styling (Terms / Privacy) */
+
 .policy-page {
   padding: 56px 24px;
   max-width: 1100px;
@@ -657,7 +657,7 @@ body{
   transform: scale(1.05);
 }
 
-/* ---------------- VS CODE TEXT BLOCK ---------------- */
+
 .code-block {
   font-family: "Consolas", "Courier New", monospace;
   background: linear-gradient(230deg, #3F1D38, #AF5279, #AF5279);

@@ -15,7 +15,7 @@ function About() {
           </div>
 
           
-          {/* --- VS CODE STYLE BLOCK HERE --- */}
+ 
           <div className="code-block">
             <p>
 ➳ I am a +2 student from Kathmandu, passionate about coding, Python, web development (HTML, Tailwind CSS, React), and cybersecurity.

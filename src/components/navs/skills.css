@@ -95,7 +95,7 @@
   border-radius: 8px;
 }
 
-/* Layout & overflow fixes for small screens */
+
 .skills-section,
 .skills-list,
 .skill-item {
@@ -113,7 +113,7 @@
 }
 
 .skill-item {
-  min-width: 0; /* allows flex items to shrink properly on narrow screens */
+  min-width: 0;
   word-break: break-word;
 }
 
