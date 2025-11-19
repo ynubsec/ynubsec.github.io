@@ -9,6 +9,7 @@ import Pro from './components/navs/project.js';
 import Skills from './components/navs/skills.js'; 
 import Footer from './components/footer.js';
 import Nav from './components/navbar.js';
+import Maps from './components/maps.js'
 
 import './App.css';
 import Photos from "./components/photos.js";
@@ -34,7 +35,9 @@ function HomePage() {
       <section id="about"><About /></section>
       <Project />
       <Photos />
+      <Maps />
       <section id="contact"><Footer /></section>
+
       
     
     </>
@@ -46,6 +49,7 @@ function SkillsPage() {
     <>
       <Skills />
       <Project />
+      <Maps />
       <Footer />
     </>
   );
