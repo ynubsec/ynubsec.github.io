@@ -1197,14 +1197,20 @@ body {
   .projects,
   .projects-bug,
   .others,
-  .footer,
   .gallery-page,
   .quick-nav,
   .blogs-section,
-  .contact-page,
+  .contact-page {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .footer,
   .footer-simple {
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 90px;
+    /* Fix for bottom nav overlap */
   }
 
   .quick-nav {
