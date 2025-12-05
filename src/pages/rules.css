@@ -1,117 +1,107 @@
-.terms-page {
-  padding: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  color: #eee;
+/* ==================== TERMS & PRIVACY PAGES ==================== */
+
+.terms-page,
+.policy-page {
+  padding: 80px 60px;
+  max-width: none;
+  margin-left: 85px;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  line-height: 1.8;
   background: transparent;
-  border-radius: 20px;
-  box-shadow: 0 0 50px rgba(0,0,0,0.4);
+  min-height: 100vh;
 }
 
 .section-title,
 .sub-title,
-.terms-page h1 {
+.terms-page h1,
+.policy-page h1 {
   color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.terms-list li {
-    list-style: none;
-  background: rgba(255, 255, 255, 0.08);
-  border-left: 3px solid #AF5279;
-  margin: 10px 0;
-  padding: 12px 15px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  transition: 0.25s;
+.terms-list,
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.terms-list li:hover {
-  background: rgba(255,255,255,0.14);
-  transform: translateY(-2px);
+.terms-list li,
+.policy-list li {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 18px 22px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.terms-list li:hover,
+.policy-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-left-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-note {
-  color: #ccc;
-  border-top: 1px solid #444;
-  padding-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  margin-top: 40px;
+  font-size: 14px;
 }
 
-
-
-/* ---------------- PRIVACY PAGE ---------------- */
-.policy-page {
-  padding: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  line-height: 1.8;
-
-  /* Elegant gradient background */
-  background: linear-gradient(87deg, #3F1D38, #3F1D38, #AF5279, #FFD6A5);
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.25);
+.updated {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-/* ---------------- HEADING ---------------- */
-.policy-page h1 {
-  font-size: 2.3rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: 600;
+.policy-list a,
+.terms-list a {
   color: #fff;
-}
-
-/* ---------------- LIST ---------------- */
-.policy-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1.5rem;
-}
-
-.policy-list li {
-  background: transparent;
-  padding: 14px 16px;
-  color:whitesmoke;
-  margin: 12px 0;
-  border-radius: 12px;
-  border-left: 4px solid #6A1B9A;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  backdrop-filter: blur(6px);
-  transition: 0.25s ease;
-}
-
-/* Hover effect */
-.policy-list li:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-  color:black;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
-
-/* ---------------- LINKS ---------------- */
-.policy-list a {
-  color: #6A1B9A;
   text-decoration: underline;
-  font-weight: 500;
+  text-underline-offset: 3px;
 }
 
-.policy-list a:hover {
-  opacity: 0.7;
+.policy-list a:hover,
+.terms-list a:hover {
+  opacity: 0.8;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* Responsive */
+@media (max-width: 900px) {
+
+  .policy-page,
+  .terms-page {
+    margin-left: 0;
+    padding: 50px 30px;
+    padding-bottom: 100px;
+  }
+}
+
 @media (max-width: 600px) {
-  .policy-page {
-    padding: 2rem;
+
+  .policy-page h1,
+  .terms-page h1 {
+    font-size: 24px;
   }
 
-  .policy-page h1 {
-    font-size: 2rem;
-  }
-
-  .policy-list li {
-    padding: 12px 14px;
+  .policy-list li,
+  .terms-list li {
+    padding: 15px 18px;
+    font-size: 14px;
   }
 }

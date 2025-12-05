@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 
 function Project() {
-    return (
-        <>
-        <div className='projects' id="projects">
+  return (
+    <>
+      <div className='projects' id="projects">
         <p>
-          Welcome to my project portfolio! Here you’ll find a curated selection
-          of work that highlights my passion for coding, web development, and cybersecurity.
+          Check out my projects showcasing web development and coding skills.
         </p>
-        <button className="btn" ><Link to="/projects"> View Projects</Link></button>
+        <button className="btn"><Link to="/projects">View Projects</Link></button>
       </div>
-
-      </>
-    );
+    </>
+  );
 }
 
 export default Project;

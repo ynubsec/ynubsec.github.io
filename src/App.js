@@ -4,14 +4,13 @@ import { useLocation } from "react-router-dom";
 
 import Hero from './components/hero.js';
 import About from './components/about.js';
-import Project from './components/projects.js';
 import Pro from './components/navs/project.js';
-import Skills from './components/navs/skills.js'; 
+import Skills from './components/navs/skills.js';
 import Footer from './components/footer.js';
 import Nav from './components/navbar.js';
-import Maps from './components/maps.js'
+import QuickNav from './components/QuickNav.js';
+import Contact from './components/Contact.js';
 import { Privacy, Terms } from './pages';
-
 import './App.css';
 import Photos from "./components/photos.js";
 import NotFound from "./page-not-found.js";
@@ -29,28 +28,47 @@ function ScrollToHash() {
   return null;
 }
 
+
 function HomePage() {
   return (
     <>
+      <QuickNav />
       <section id="home"><Hero /></section>
       <section id="about"><About /></section>
-      <Project />
-      <Photos />
-      <Maps />
-      <section id="contact"><Footer /></section>
-
-      
-    
+      <Footer />
     </>
   );
 }
+
 
 function SkillsPage() {
   return (
     <>
       <Skills />
-      <Project />
-      <Maps />
+      <Footer />
+    </>
+  );
+}
+
+
+function GalleryPage() {
+  return (
+    <>
+      <div className="gallery-page">
+        <h1 className="gallery-title">Photo Gallery</h1>
+        <p className="gallery-desc">A collection of photos and memories from my journey.</p>
+      </div>
+      <Photos />
+      <Footer />
+    </>
+  );
+}
+
+
+function ContactPage() {
+  return (
+    <>
+      <Contact />
       <Footer />
     </>
   );
@@ -60,12 +78,15 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToHash />
+
       <div className="root">
         <Nav />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Pro />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
