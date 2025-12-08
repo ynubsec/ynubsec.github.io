@@ -14,6 +14,20 @@ function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [delta, setDelta] = useState(150);
+  const [views, setViews] = useState('...');
+
+  useEffect(() => {
+    // Determine a unique key. Using domain/username is best.
+    const namespace = 'bishnuneupane13.github.io';
+    const key = 'visits';
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then(res => res.json())
+      .then(data => setViews(data.value))
+      .catch(err => {
+        console.error('Error fetching view count:', err);
+        setViews('N/A');
+      });
+  }, []);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -52,8 +66,14 @@ function Hero() {
     <>
       <section className="hero" id="home">
         <div className="hero-content">
-          <div className="hero-img">
-            <img src={profile} alt="Profile" />
+          <div className="hero-profile-wrapper">
+            <div className="hero-img">
+              <img src={profile} alt="Profile" />
+            </div>
+            <div className="view-count">
+              <i className="fa-solid fa-eye"></i>
+              <span>Total Views: {views}</span>
+            </div>
           </div>
 
           <div className="hero-text">

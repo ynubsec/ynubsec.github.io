@@ -1395,3 +1395,48 @@ body {
   transform: translateY(-2px);
   border-color: #fff;
 }
+
+/* Added for View Count support in Hero section */
+.hero-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  /* Keeps the image area from shrinking */
+  order: 1;
+  /* Moves the profile wrapper to the right */
+}
+
+/* Ensure the image is visually above the view count inside the wrapper */
+.hero-profile-wrapper .hero-img {
+  order: 0;
+}
+
+.view-count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.view-count:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.view-count i {
+  font-size: 14px;
+}
