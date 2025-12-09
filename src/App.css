@@ -191,6 +191,11 @@ body {
   color: #fff;
   margin-bottom: 12px;
   font-family: 'JetBrains Mono', monospace;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
 }
 
 .role {
