@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.86900316.css",
-    "main.js": "/static/js/main.9f0a2d8a.js",
+    "main.js": "/static/js/main.5b55d25c.js",
     "static/js/453.57a214c1.chunk.js": "/static/js/453.57a214c1.chunk.js",
     "static/media/logo.png": "/static/media/logo.8af728104a2d0edd4834.png",
     "static/media/project1.png": "/static/media/project1.6d0edb1d05a00cde7eec.png",
@@ -10,17 +10,19 @@
     "static/media/image5.jpg": "/static/media/image5.a10be45703f91b1eb729.jpg",
     "static/media/image4.jpg": "/static/media/image4.d1bdcdba28f01b5973f8.jpg",
     "static/media/profile.png": "/static/media/profile.eed452930ee64affb44f.png",
+    "static/media/image7.jpg": "/static/media/image7.ccb29e1672147b0b78c0.jpg",
+    "static/media/image6.jpg": "/static/media/image6.c56d15a9867d10e77855.jpg",
     "static/media/pic.png": "/static/media/pic.cdbd6f75b7cd1811d869.png",
     "static/media/image3.jpg": "/static/media/image3.20be8ad1ea0f0de35226.jpg",
     "static/media/coming-soon.png": "/static/media/coming-soon.b9abf506cef4ff7b8bd6.png",
-    "static/media/bishnu-neupane-cv.pdf": "/static/media/bishnu-neupane-cv.252444e7d9650aaad100.pdf",
+    "static/media/bishnu-neupane-cv.pdf": "/static/media/bishnu-neupane-cv.8e7d2fff5a1200092d7e.pdf",
     "index.html": "/index.html",
     "main.86900316.css.map": "/static/css/main.86900316.css.map",
-    "main.9f0a2d8a.js.map": "/static/js/main.9f0a2d8a.js.map",
+    "main.5b55d25c.js.map": "/static/js/main.5b55d25c.js.map",
     "453.57a214c1.chunk.js.map": "/static/js/453.57a214c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86900316.css",
-    "static/js/main.9f0a2d8a.js"
+    "static/js/main.5b55d25c.js"
   ]
 }
