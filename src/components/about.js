@@ -1,49 +1,55 @@
 function About() {
   return (
-    <>
-      <section className="about-us" id="about">
-        <h2>About Me</h2>
+    <section className="about-us" id="about">
+      {/* BIO TEXT (VERY IMPORTANT FOR GOOGLE) */}
+      <header className="about-header">
+        <h1>About Bishnu Neupane</h1>
+        <p>
+          Bishnu Neupane is a frontend developer and cybersecurity enthusiast from
+          Kathmandu, Nepal. He is passionate about building modern web applications,
+          learning security concepts, and exploring new technologies.
+        </p>
+      </header>
 
-        <div className="about-grid">
-          {/* Education */}
-          <div className="about-card">
-            <div className="about-card-icon">
-              <i className="fa-solid fa-graduation-cap"></i>
-            </div>
-            <h3>Education</h3>
-            <p>
-              +2 student from Kathmandu, Nepal. Passionate about technology and currently
-              exploring the world of programming.
-            </p>
+      <div className="about-grid">
+        {/* Education */}
+        <div className="about-card">
+          <div className="about-card-icon">
+            <i className="fa-solid fa-graduation-cap"></i>
           </div>
-
-          {/* Skills */}
-          <div className="about-card">
-            <div className="about-card-icon">
-              <i className="fa-solid fa-code"></i>
-            </div>
-            <h3>Skills</h3>
-            <p>
-              Frontend: React, JavaScript, HTML5, CSS3<br />
-              Backend: Python<br />
-              Tools: Git, VS Code
-            </p>
-          </div>
-
-          {/* Interests */}
-          <div className="about-card">
-            <div className="about-card-icon">
-              <i className="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3>Interests</h3>
-            <p>
-              Cybersecurity enthusiast learning about network security and ethical hacking.
-              Love experimenting with Linux systems.
-            </p>
-          </div>
+          <h2>Education</h2>
+          <p>
+            +2 student from Kathmandu, Nepal, actively learning computer science,
+            programming fundamentals, and real-world development practices.
+          </p>
         </div>
-      </section>
-    </>
+
+        {/* Skills */}
+        <div className="about-card">
+          <div className="about-card-icon">
+            <i className="fa-solid fa-code"></i>
+          </div>
+          <h2>Skills</h2>
+          <p>
+            <strong>Frontend:</strong> React, JavaScript, HTML5, CSS3<br />
+            <strong>Backend:</strong> Python<br />
+            <strong>Tools:</strong> Git, VS Code
+          </p>
+        </div>
+
+        {/* Interests */}
+        <div className="about-card">
+          <div className="about-card-icon">
+            <i className="fa-solid fa-shield-halved"></i>
+          </div>
+          <h2>Interests</h2>
+          <p>
+            Cybersecurity enthusiast exploring ethical hacking, Linux systems,
+            networking basics, and secure web development.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
