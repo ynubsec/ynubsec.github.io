@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.86900316.css",
-    "main.js": "/static/js/main.50f9206f.js",
+    "main.css": "/static/css/main.748ad2a7.css",
+    "main.js": "/static/js/main.01b79fee.js",
     "static/js/453.57a214c1.chunk.js": "/static/js/453.57a214c1.chunk.js",
     "static/media/logo.png": "/static/media/logo.8af728104a2d0edd4834.png",
     "static/media/project1.png": "/static/media/project1.6d0edb1d05a00cde7eec.png",
     "static/media/image1.jpg": "/static/media/image1.36e2d7b085e36c64e98b.jpg",
     "static/media/image2.jpg": "/static/media/image2.3798329b9411f96adee0.jpg",
     "static/media/image5.jpg": "/static/media/image5.a10be45703f91b1eb729.jpg",
+    "static/media/image8.jpg": "/static/media/image8.12a42d5231c7993c7c0d.jpg",
+    "static/media/image9.jpg": "/static/media/image9.a3f566b349eaa5134e7e.jpg",
     "static/media/image4.jpg": "/static/media/image4.d1bdcdba28f01b5973f8.jpg",
     "static/media/profile.png": "/static/media/profile.eed452930ee64affb44f.png",
     "static/media/image7.jpg": "/static/media/image7.ccb29e1672147b0b78c0.jpg",
@@ -17,12 +19,12 @@
     "static/media/coming-soon.png": "/static/media/coming-soon.b9abf506cef4ff7b8bd6.png",
     "index.html": "/index.html",
     "static/media/bishnu-neupane-cv.pdf": "/static/media/bishnu-neupane-cv.8e7d2fff5a1200092d7e.pdf",
-    "main.86900316.css.map": "/static/css/main.86900316.css.map",
-    "main.50f9206f.js.map": "/static/js/main.50f9206f.js.map",
+    "main.748ad2a7.css.map": "/static/css/main.748ad2a7.css.map",
+    "main.01b79fee.js.map": "/static/js/main.01b79fee.js.map",
     "453.57a214c1.chunk.js.map": "/static/js/453.57a214c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86900316.css",
-    "static/js/main.50f9206f.js"
+    "static/css/main.748ad2a7.css",
+    "static/js/main.01b79fee.js"
   ]
 }
