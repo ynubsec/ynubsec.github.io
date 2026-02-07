@@ -19,7 +19,7 @@ function Hero() {
 
   useEffect(() => {
     // Using counterapi.dev as countapi.xyz is unstable
-    fetch('https://api.counterapi.dev/v1/bishnuneupane13/portfolio/up')
+    fetch('https://api.counterapi.dev/v1/ynubsec/portfolio/up')
       .then(res => res.json())
       .then(data => {
         console.log('View count response:', data);

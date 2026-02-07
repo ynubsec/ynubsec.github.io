@@ -128,9 +128,9 @@ function GalleryPage() {
             {/* Content Layer */}
             <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
               <ProfileCard
-                name="Bishnu Neupane"
-                github="https://github.com/bishnuneupane13"
-                linkedin="https://linkedin.com/in/bishnuneupane13"
+                name="Ynub"
+                github="https://github.com/ynubsec"
+                linkedin="https://linkedin.com/in/ynubsec"
               />
             </div>
           </section>
