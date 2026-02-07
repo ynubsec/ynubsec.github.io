@@ -13,17 +13,17 @@ function Contact() {
                     <h2>Contact Info</h2>
 
                     <div className="contact-links">
-                        <a href="mailto:gwbishnu10@gmail.com" className="contact-link-item">
+                        <a href="mailto:contact.ynub@gmail.com" className="contact-link-item">
                             <i className="fa-solid fa-envelope"></i>
-                            <span>gwbishnu10@gmail.com</span>
+                            <span>contact.ynub@gmail.com</span>
                         </a>
-                        <a href="https://github.com/bishnuneupane13" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+                        <a href="https://github.com/ynubsec" target="_blank" rel="noopener noreferrer" className="contact-link-item">
                             <i className="fa-brands fa-github"></i>
-                            <span>bishnuneupane13</span>
+                            <span>ynubsec</span>
                         </a>
-                        <a href="https://linkedin.com/in/bishnuneupane13" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+                        <a href="https://linkedin.com/in/ynubsec" target="_blank" rel="noopener noreferrer" className="contact-link-item">
                             <i className="fa-brands fa-linkedin"></i>
-                            <span>bishnuneupane13</span>
+                            <span>ynubsec</span>
                         </a>
                     </div>
 

@@ -48,7 +48,7 @@ function Nav() {
           </Link>
         </li>
         <li className="nav-item">
-          <a href="https://bishnuneupane13.github.io/blogs/" target="_blank" rel="noopener noreferrer" className="nav-link">
+          <a href="https://ynubsec.github.io/blogs/" target="_blank" rel="noopener noreferrer" className="nav-link">
             <i className="fa-solid fa-newspaper"></i>
             <span>BLOGS</span>
           </a>
