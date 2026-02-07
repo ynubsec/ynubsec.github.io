@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import cv from './bishnu-neupane-cv.pdf';
+import cv from './ynubsec-cv.pdf';
 import profile from '../medias/profile.png';
 
 
@@ -74,7 +74,7 @@ function Hero() {
                 <i className="fa-solid fa-eye" style={{ fontSize: '12px', color: 'white' }}></i>
                 <span style={{ fontSize: '12px', color: 'white' }}>{views}</span>
               </div>
-              <img src={profile} alt="Bishnu Neupane - Frontend Developer & Cybersecurity Enthusiast" />
+              <img src={profile} alt="ynubsec - Frontend Developer & Cybersecurity Enthusiast" />
 
             </div>
 
@@ -82,7 +82,7 @@ function Hero() {
 
           <div className="hero-text">
             <p className="hero-greeting">Hello, I'm</p>
-            <h1 className="hero-name"><span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>Bishnu</span> <span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>Neupane</span></h1>
+            <h1 className="hero-name"><span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>ynubsec</span></h1>
 
             <h2 className="role rotating-text">
               <span className="text">{text}</span>
@@ -107,7 +107,7 @@ function Hero() {
 
             <div className="hero-social">
               <a
-                href="https://github.com/bishnuneupane13"
+                href="https://github.com/ynubsec"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -115,7 +115,7 @@ function Hero() {
               </a>
 
               <a
-                href="https://linkedin.com/in/bishnuneupane13"
+                href="https://linkedin.com/in/ynubsec"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -123,7 +123,7 @@ function Hero() {
               </a>
 
               <a
-                href="https://bishnuneupane13.github.io/blogs/"
+                href="https://ynubsec.github.io/blogs/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -133,7 +133,7 @@ function Hero() {
             </div>
 
             {/* CV Download Button - Moved outside hero-social */}
-            <a href={cv} download="bishnu-neupane-cv.pdf" className="cv-link">
+            <a href={cv} download="ynubsec-cv.pdf" className="cv-link">
               <div className="cv-download">
                 <i className="fa-solid fa-download"></i>
                 <span>Download CV</span>
