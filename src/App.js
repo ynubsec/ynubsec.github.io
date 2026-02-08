@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -154,7 +154,7 @@ function ContactPage() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToHash />
 
       <div className="root">
@@ -174,7 +174,7 @@ function App() {
         </Routes>
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
