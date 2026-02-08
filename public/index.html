@@ -386,6 +386,33 @@
   </script>
 
   <noscript>You need JavaScript enabled to run this site.</noscript>
+  <script>
+    // Fail-safe: Remove intro if it gets stuck
+    setTimeout(() => {
+      const intro = document.getElementById('app-intro');
+      if (intro) {
+        console.warn('Force removing intro...');
+        intro.style.display = 'none';
+        document.body.classList.remove('intro-active');
+      }
+    }, 5000);
+
+    // Error logging to screen
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+      const errorDiv = document.createElement('div');
+      errorDiv.style.position = 'fixed';
+      errorDiv.style.bottom = '0';
+      errorDiv.style.left = '0';
+      errorDiv.style.width = '100%';
+      errorDiv.style.background = 'red';
+      errorDiv.style.color = 'white';
+      errorDiv.style.padding = '10px';
+      errorDiv.style.zIndex = '99999';
+      errorDiv.innerText = 'Error: ' + msg + ' at ' + url + ':' + lineNo;
+      document.body.appendChild(errorDiv);
+      return false;
+    };
+  </script>
   <div id="root"></div>
 </body>
 
