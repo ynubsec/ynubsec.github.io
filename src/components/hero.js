@@ -82,7 +82,7 @@ function Hero() {
 
           <div className="hero-text">
             <p className="hero-greeting">Hello, I'm</p>
-            <h1 className="hero-name"><span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>ynubsec</span></h1>
+            <h1 className="hero-name"><span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>Bishnu Neupane (ynubsec)</span></h1>
 
             <h2 className="role rotating-text">
               <span className="text">{text}</span>
