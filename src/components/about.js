@@ -7,7 +7,7 @@ function About() {
         <p>
           I am a frontend developer and cybersecurity enthusiast from
           Kathmandu, Nepal. I am passionate about building modern web applications,
-          learning security concepts, and exploring new technologies.
+          learning security concepts, and exploring new technologies and also web pentesting with red teaming.
         </p>
       </header>
 
