@@ -1,6 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bishnuneupane13.github.io/sitemap.xml
-
-Sitemap: https://bishnuneupane13.tech/sitemap.xml
+Sitemap: https://ynubsec.github.io/sitemap.xml
