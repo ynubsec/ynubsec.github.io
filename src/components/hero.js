@@ -82,7 +82,18 @@ function Hero() {
 
           <div className="hero-text">
             <p className="hero-greeting">Hello, I'm</p>
-            <h1 className="hero-name"><span style={{ textDecoration: 'underline', fontStyle: 'oblique' }}>Bishnu Neupane (ynubsec)</span></h1>
+            <h1 className="hero-name">
+              <span className="real-name">Bishnu Neupane</span>
+              <span className="alias" style={{
+                fontSize: '0.6em',
+                verticalAlign: 'middle',
+                marginLeft: '10px',
+                opacity: 0.8,
+                fontStyle: 'italic',
+                fontWeight: '400',
+                color: 'var(--accent-color, #94a3b8)'
+              }}> (@ynubsec)</span>
+            </h1>
 
             <h2 className="role rotating-text">
               <span className="text">{text}</span>
