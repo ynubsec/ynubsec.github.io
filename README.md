@@ -1,51 +1,51 @@
-# 🚀 Bishnu Neupane - Frontend Developer Portfolio
-
-A modern, responsive portfolio website showcasing frontend development skills, projects, and contact capabilities.
-
-**Live Demo:** Published via GitHub Pages
----
-
-## ✨ Features
-
-- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI** - Beautiful gradient backgrounds and smooth animations
-- **Contact Form** - Submissions are saved to a JSON database and can be emailed
-- **Photo Gallery** - Scrollable image showcase with smooth navigation
-- **About Section** - Detailed bio and professional information
-- **Navigation** - Sticky navbar with smooth scroll linking
-- **SEO Optimized** - Proper meta tags and semantic HTML
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React 18** - UI library
-- **CSS3** - Custom styling with gradients and animations
-- **HTML5** - Semantic markup
-
-### Backend
-- **Node.js** - Runtime environment
-
-### Deployment
-- **GitHub Pages** - Static site hosting 
-- **GitHub** - Version control
 
 
+def line():
+    print("=" * 55)
 
-## 👤 Author
+def slow_print(messages):
+    for msg in messages:
+        print(msg)
 
-**Bishnu Neupane**
-- Email: [gwbishnu10@gmail.com](mailto:gwbishnu10@gmail.com)
-- GitHub: [@bishnuneupane13](https://github.com/bishnuneupane13)
-- Instagram: [@bishnuneupane13](https://instagram.com/bishnuneupane13)
-- LinkedIn: [@bishnuneupane13](https://linkedin.com/in/bishnuneupane13)
+line()
 
----
+intro = [
+    "Hello there 👋",
+    "Welcome to my project!",
+    "",
+    "I'm a Frontend Developer",
+    "and a Cybersecurity Enthusiast 🔐",
+    "I enjoy Bug Bounty Hunting and learning how systems break (and how to fix them)."
+]
 
-## 🙌 Support
+slow_print(intro)
 
-If you find this project helpful, please consider:
-- ⭐ Starring this repository
-- 🔗 Sharing the portfolio link
-- 💬 Providing feedback
+line()
+
+sections = {
+    "🌐 Portfolio": "https://ynubsec.github.io",
+    "📝 Blogs": "https://ynubsec.github.io/blogs",
+    "💻 Projects": "Explore the repository folders",
+}
+
+print("\nFind me around the web:\n")
+
+for name, link in sections.items():
+    print(f"{name:<15} -> {link}")
+
+line()
+
+skills = [
+    "HTML / CSS / JS",
+    "Frontend Development",
+    "Bug Bounty Hunting",
+    "Web Security Learning",
+]
+
+print("\nCurrent Focus:\n")
+for skill in skills:
+    print(f" - {skill}")
+
+line()
+
+print("\nThanks for checking out the project 🚀")
