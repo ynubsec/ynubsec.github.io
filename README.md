@@ -1,51 +1,26 @@
+## 👋 About Me
 
+Hi! I'm a **Frontend Developer** passionate about building clean interfaces and exploring web security.
 
-def line():
-    print("=" * 55)
+Alongside development, I enjoy:
+- 🔐 Bug bounty hunting
+- 🧠 Learning cybersecurity
+- 🛠 Understanding how web applications break (and how to secure them)
 
-def slow_print(messages):
-    for msg in messages:
-        print(msg)
+---
 
-line()
+## 🌐 Links
 
-intro = [
-    "Hello there 👋",
-    "Welcome to my project!",
-    "",
-    "I'm a Frontend Developer",
-    "and a Cybersecurity Enthusiast 🔐",
-    "I enjoy Bug Bounty Hunting and learning how systems break (and how to fix them)."
-]
+- Portfolio: https://ynubsec.github.io
+- Blogs: https://ynubsec.github.io/blogs
 
-slow_print(intro)
+---
 
-line()
+## 💡 Current Focus
+- Frontend Engineering
+- Web Security Research
+- Practical Bug Hunting
 
-sections = {
-    "🌐 Portfolio": "https://ynubsec.github.io",
-    "📝 Blogs": "https://ynubsec.github.io/blogs",
-    "💻 Projects": "Explore the repository folders",
-}
+---
 
-print("\nFind me around the web:\n")
-
-for name, link in sections.items():
-    print(f"{name:<15} -> {link}")
-
-line()
-
-skills = [
-    "HTML / CSS / JS",
-    "Frontend Development",
-    "Bug Bounty Hunting",
-    "Web Security Learning",
-]
-
-print("\nCurrent Focus:\n")
-for skill in skills:
-    print(f" - {skill}")
-
-line()
-
-print("\nThanks for checking out the project 🚀")
+Thanks for visiting this project 🚀
