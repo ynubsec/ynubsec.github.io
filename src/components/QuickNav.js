@@ -5,7 +5,7 @@ function QuickNav() {
         <div className="quick-nav">
             <a href="https://ynubsec.github.io/newsletter/" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
                 <i className="fa-solid fa-newspaper"></i>
-                <span>Newsletter</span>
+                <span>News.Letter</span>
             </a>
             <a href="https://github.com/ynubsec" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
                 <i className="fa-brands fa-github"></i>
