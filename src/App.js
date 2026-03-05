@@ -16,7 +16,7 @@ import './App.css';
 import Photos from "./components/photos.js";
 import Reviews from "./components/reviews.js";
 import NotFound from "./page-not-found.js";
-import Dreams from "./components/Dreams.js";
+
 import bg from "./medias/bmw.jpg";
 
 
@@ -56,15 +56,6 @@ function SkillsPage() {
   );
 }
 
-
-function DreamsPage() {
-  return (
-    <>
-      <Dreams />
-      <Footer />
-    </>
-  );
-}
 
 
 function GalleryPage() {
@@ -163,7 +154,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Pro />} />
           <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/dreams" element={<DreamsPage />} />
+
           <Route path="/gallary" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />

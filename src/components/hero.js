@@ -138,7 +138,7 @@ function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-blog"></i>
+                <i className="fa-solid fa-newspaper"></i>
               </a>
 
             </div>

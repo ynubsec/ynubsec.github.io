@@ -41,16 +41,11 @@ function Nav() {
             <span>SKILLS</span>
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/dreams" className="nav-link">
-            <i className="fa-solid fa-star"></i>
-            <span>DREAMS</span>
-          </Link>
-        </li>
+
         <li className="nav-item">
           <a href="https://ynubsec.github.io/blogs/" target="_blank" rel="noopener noreferrer" className="nav-link">
             <i className="fa-solid fa-newspaper"></i>
-            <span>BLOGS</span>
+            <span>NEWSLETTER</span>
           </a>
         </li>
         <li className="nav-item">

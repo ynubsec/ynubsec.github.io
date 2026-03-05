@@ -5,7 +5,7 @@ function QuickNav() {
         <div className="quick-nav">
             <a href="https://ynubsec.github.io/blogs/" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
                 <i className="fa-solid fa-newspaper"></i>
-                <span>Blogs</span>
+                <span>Newsletter</span>
             </a>
             <a href="https://github.com/ynubsec" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
                 <i className="fa-brands fa-github"></i>
@@ -15,10 +15,7 @@ function QuickNav() {
                 <i className="fa-brands fa-linkedin"></i>
                 <span>LinkedIn</span>
             </a>
-            <Link to="/dreams" className="quick-nav-item">
-                <i className="fa-solid fa-rocket"></i>
-                <span>Dreams</span>
-            </Link>
+
             <Link to="/gallary" className="quick-nav-item">
                 <i className="fa-solid fa-images"></i>
                 <span>Gallery</span>
