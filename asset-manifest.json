@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e20d1539.css",
-    "main.js": "/static/js/main.54922850.js",
+    "main.css": "/static/css/main.a85fd144.css",
+    "main.js": "/static/js/main.5771fd4e.js",
     "static/js/453.57a214c1.chunk.js": "/static/js/453.57a214c1.chunk.js",
     "static/media/logo.png": "/static/media/logo.8af728104a2d0edd4834.png",
     "static/media/project1.png": "/static/media/project1.6d0edb1d05a00cde7eec.png",
     "static/media/image1.jpg": "/static/media/image1.36e2d7b085e36c64e98b.jpg",
     "static/media/image2.jpg": "/static/media/image2.3798329b9411f96adee0.jpg",
-    "static/media/bmw4.jpg": "/static/media/bmw4.722084b19ff82497948f.jpg",
     "static/media/image5.jpg": "/static/media/image5.a10be45703f91b1eb729.jpg",
     "static/media/image8.jpg": "/static/media/image8.12a42d5231c7993c7c0d.jpg",
     "static/media/image9.jpg": "/static/media/image9.a3f566b349eaa5134e7e.jpg",
-    "static/media/bmw5.jpg": "/static/media/bmw5.456816f8a4d411ee0416.jpg",
-    "static/media/bmw2.jpg": "/static/media/bmw2.8d4a48a3c6f67cc53563.jpg",
     "static/media/bmw.jpg": "/static/media/bmw.f89fd6b38e29c16d6ea1.jpg",
-    "static/media/bmw1.jpg": "/static/media/bmw1.330fe71e1a010df7a287.jpg",
     "static/media/image4.jpg": "/static/media/image4.d1bdcdba28f01b5973f8.jpg",
-    "static/media/bmw6.jpg": "/static/media/bmw6.734c260183a543cdd5e8.jpg",
     "static/media/profile.png": "/static/media/profile.eed452930ee64affb44f.png",
-    "static/media/bmw3.jpg": "/static/media/bmw3.6a75a556004dd176d5e0.jpg",
     "static/media/image7.jpg": "/static/media/image7.ccb29e1672147b0b78c0.jpg",
     "static/media/image6.jpg": "/static/media/image6.c56d15a9867d10e77855.jpg",
     "static/media/pic.png": "/static/media/pic.cdbd6f75b7cd1811d869.png",
@@ -27,12 +21,12 @@
     "static/media/icon.jpeg": "/static/media/icon.fe0db59593f749f7fca6.jpeg",
     "index.html": "/index.html",
     "static/media/ynubsec-cv.pdf": "/static/media/ynubsec-cv.8e7d2fff5a1200092d7e.pdf",
-    "main.e20d1539.css.map": "/static/css/main.e20d1539.css.map",
-    "main.54922850.js.map": "/static/js/main.54922850.js.map",
+    "main.a85fd144.css.map": "/static/css/main.a85fd144.css.map",
+    "main.5771fd4e.js.map": "/static/js/main.5771fd4e.js.map",
     "453.57a214c1.chunk.js.map": "/static/js/453.57a214c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e20d1539.css",
-    "static/js/main.54922850.js"
+    "static/css/main.a85fd144.css",
+    "static/js/main.5771fd4e.js"
   ]
 }
