@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 function QuickNav() {
     return (
         <div className="quick-nav">
-            <a href="https://ynubsec.github.io/blogs/" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
+            <a href="https://ynubsec.github.io/newsletter/" target="_blank" rel="noopener noreferrer" className="quick-nav-item">
                 <i className="fa-solid fa-newspaper"></i>
                 <span>Newsletter</span>
             </a>

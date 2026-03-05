@@ -134,7 +134,7 @@ function Hero() {
               </a>
 
               <a
-                href="https://ynubsec.github.io/blogs/"
+                href="https://ynubsec.github.io/newsletter/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
