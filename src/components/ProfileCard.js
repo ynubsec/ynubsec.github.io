@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './ProfileCard.css';
 import profileImg from '../medias/image3.jpg';
 

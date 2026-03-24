@@ -20,18 +20,18 @@ function Photos() {
       <h2>Photo Gallery</h2>
 
       <div className="photo-list">
-        <img src={image3} alt="Bishnu Neupane - Personal Photo 1" />
-        <img src={logo} alt="Bishnu Neupane - Official Logo" />
-        <img src={image4} alt="Bishnu Neupane - Personal Photo 2" />
-        <img src={pic} alt="Bishnu Neupane - Profile Illustration" />
-        <img src={image2} alt="Bishnu Neupane - Personal Photo 3" />
-        <img src={image1} alt="Bishnu Neupane - Personal Photo 4" />
-        <img src={profile} alt="Bishnu Neupane - Professional Profile" />
-        <img src={image5} alt="Bishnu Neupane - Personal Photo 5" />
-        <img src={image6} alt="Bishnu Neupane - Personal Photo 6" />
-        <img src={image7} alt="Bishnu Neupane - Personal Photo 7" />
-        <img src={image8} alt="Bishnu Neupane - Personal Photo 8" />
-        <img src={image9} alt="Bishnu Neupane - Personal Photo 9" />
+        <img src={image3} alt="Portrait 1" />
+        <img src={logo} alt="Brand mark" />
+        <img src={image4} alt="Portrait 2" />
+        <img src={pic} alt="Profile illustration" />
+        <img src={image2} alt="Portrait 3" />
+        <img src={image1} alt="Portrait 4" />
+        <img src={profile} alt="Professional profile" />
+        <img src={image5} alt="Portrait 5" />
+        <img src={image6} alt="Portrait 6" />
+        <img src={image7} alt="Portrait 7" />
+        <img src={image8} alt="Portrait 8" />
+        <img src={image9} alt="Portrait 9" />
       </div>
     </div>
   );

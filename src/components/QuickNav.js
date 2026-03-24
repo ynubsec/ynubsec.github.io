@@ -20,7 +20,12 @@ function QuickNav() {
                 <i className="fa-solid fa-images"></i>
                 <span>Gallery</span>
             </Link>
-            <NavLink exact to="/reviews" className="quick-nav-item" activeClassName="active">
+            <NavLink
+                to="/reviews"
+                className={({ isActive }) =>
+                    `quick-nav-item${isActive ? ' active' : ''}`
+                }
+            >
                 <i className="fa-solid fa-star"></i>
                 <span>Reviews</span>
             </NavLink>

@@ -17,14 +17,14 @@ function Nav() {
   return (
     <nav className="sidebar">
       <div className="sidebar-logo">
-        <button className="logo-btn" onClick={() => scrollToSection("home")}>
+        <button type="button" className="logo-btn" onClick={() => scrollToSection("home")}>
           <img src={logo} alt="Logo" />
         </button>
       </div>
 
       <ul className="sidebar-nav">
         <li className="nav-item">
-          <button onClick={() => scrollToSection("home")} className="nav-link">
+          <button type="button" onClick={() => scrollToSection("home")} className="nav-link">
             <i className="fa-solid fa-house"></i>
             <span>HOME</span>
           </button>

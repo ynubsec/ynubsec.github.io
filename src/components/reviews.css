@@ -1,99 +1,81 @@
 .reviews-section {
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-    padding: 4rem 2rem;
-    padding-left: 120px;
-
-    color: #fff;
-    font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 0 var(--content-pad) 5rem;
+  color: #fff;
 }
 
 .reviews-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  width: min(1200px, 100%);
+  margin: 0 auto;
 }
 
 .reviews-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(90deg, #fff, #94a3b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .reviews-subtitle {
-    text-align: center;
-    color: #94a3b8;
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
+  margin: 0 0 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
 }
 
-/* Grid layout - Responsive */
 .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
-/* Glassmorphism Card Style */
 .review-card {
-    background: rgba(30, 41, 59, 0.7);
-    /* Semi-transparent dark blue */
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .review-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #3b82f6;
-    /* Blue accent border */
-    margin-right: 1rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .review-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    margin: 0;
+  margin: 0;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .review-stars {
-    color: #fbbf24;
-    /* Amber/Gold for stars */
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
+  color: #fff;
+  margin-top: 0.25rem;
 }
 
 .review-text {
-    color: #cbd5e1;
-    /* Light gray text */
-    line-height: 1.6;
-    font-size: 0.95rem;
-    margin: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .reviews-section {
+    padding-bottom: 6rem;
+  }
 }

@@ -1,89 +1,38 @@
 .notfound-section {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  text-align: center;
-  padding: 40px;
-  margin-left: 85px;
+  display: grid;
+  place-items: center;
+  padding: 2rem var(--content-pad) 5rem;
 }
 
 .notfound-content {
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 60px 50px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: min(560px, 100%);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3.2rem);
 }
 
 .notfound-content h1 {
-  font-size: 100px;
   margin: 0;
-  color: #fff;
-  font-weight: 900;
-  line-height: 1;
-  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .notfound-content h2 {
-  font-size: 24px;
-  margin: 20px 0;
-  color: #fff;
-  font-weight: 700;
+  margin: 0.75rem 0 0;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .notfound-content p {
-  font-size: 15px;
-  margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-}
-
-.home-btn {
-  padding: 14px 32px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(10px);
-}
-
-.home-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
+  margin: 1rem 0 1.5rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
 }
 
 @media (max-width: 900px) {
   .notfound-section {
-    margin-left: 0;
-    padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 600px) {
-  .notfound-content {
-    padding: 40px 30px;
-  }
-
-  .notfound-content h1 {
-    font-size: 70px;
-  }
-
-  .notfound-content h2 {
-    font-size: 20px;
+    padding-bottom: 6rem;
   }
 }

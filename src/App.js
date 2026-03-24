@@ -61,73 +61,30 @@ function SkillsPage() {
 function GalleryPage() {
   return (
     <>
-      <div className="gallery-layout" style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '40px',
-        padding: '20px'
-      }}>
-
-
-
+      <div className="gallery-layout">
         <Photos />
 
-        <div style={{ width: '100%', marginTop: '40px' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '800',
-            textAlign: 'center',
-            marginBottom: '30px',
-            color: '#fff',
-            fontFamily: "'Inter', sans-serif",
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-            background: 'linear-gradient(to right, #fff, #94a3b8)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Profile Card
-          </h2>
+        <div className="gallery-profile-area">
+          <h2 className="gallery-profile-title">Profile Card</h2>
 
-          {/* Profile Card Section with Background */}
-          <section style={{
-            width: '100%',
-            maxWidth: '1200px',
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            padding: '60px 20px',
-            overflow: 'hidden',
-            borderRadius: '20px',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            margin: '0 auto'
-          }}>
-            {/* Background Image Layer */}
-            <div style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              backgroundImage: `url(${bg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(0.6) contrast(1.2)',
-              zIndex: 0
-            }}></div>
+          <section className="gallery-profile-stage">
+            <div
+              className="gallery-profile-stage-bg"
+              style={{ backgroundImage: `url(${bg})` }}
+            />
 
-            {/* Content Layer */}
-            <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+            <div className="gallery-profile-stage-content">
               <ProfileCard
-                name="Ynub"
+                name="Bishnu Neupane"
                 github="https://github.com/ynubsec"
                 linkedin="https://linkedin.com/in/ynubsec"
+                role="Frontend Developer | Cybersecurity Learner"
+                bio="Building polished, responsive websites while learning security, systems, and modern frontend craft."
               />
             </div>
           </section>
         </div>
-
-      </div >
+      </div>
       <Footer />
     </>
   );
@@ -150,15 +107,16 @@ function App() {
 
       <div className="root">
         <Nav />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Pro />} />
-          <Route path="/skills" element={<SkillsPage />} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<Pro />} />
+        <Route path="/skills" element={<SkillsPage />} />
 
-          <Route path="/gallary" element={<GalleryPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
+        <Route path="/gallary" element={<GalleryPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
           <Route path="/card" element={<ProfileCard />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="*" element={<NotFound />} />

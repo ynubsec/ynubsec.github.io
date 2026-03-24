@@ -3,14 +3,13 @@ import { useState, useEffect } from 'react';
 import cv from './ynubsec-cv.pdf';
 import profile from '../medias/profile.png';
 
+const roles = [
+  "Frontend Web Developer",
+  "Python Developer",
+  "Cybersecurity Learner",
+];
 
 function Hero() {
-  const roles = [
-    "Frontend Web Developer",
-    "Python Developer",
-    "Cybersecurity Learner",
-  ];
-
   const [text, setText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -32,37 +31,35 @@ function Hero() {
   }, []);
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
+    const tick = () => {
+      const i = roleIndex % roles.length;
+      const fullText = roles[i];
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta(prevDelta => prevDelta / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(1500);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setRoleIndex(prevIndex => prevIndex + 1);
+        setDelta(200);
+      } else {
+        setDelta(prevDelta => (isDeleting ? 50 : 150));
+      }
+    };
+
+    const ticker = setInterval(tick, delta);
 
     return () => clearInterval(ticker);
-  }, [text, delta]);
-
-  const tick = () => {
-    let i = roleIndex % roles.length;
-    let fullText = roles[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(1500);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setRoleIndex(roleIndex + 1);
-      setDelta(200);
-    } else {
-      setDelta(prevDelta => (isDeleting ? 50 : 150));
-    }
-  };
+  }, [text, delta, roleIndex, isDeleting]);
 
   return (
     <>
@@ -71,8 +68,8 @@ function Hero() {
           <div className="hero-profile-wrapper">
             <div className="hero-img">
               <div className="view-count">
-                <i className="fa-solid fa-eye" style={{ fontSize: '12px', color: 'white' }}></i>
-                <span style={{ fontSize: '12px', color: 'white' }}>{views}</span>
+                <i className="fa-solid fa-eye"></i>
+                <span>{views}</span>
               </div>
               <img src={profile} alt="ynubsec - Frontend Developer & Cybersecurity Enthusiast" />
 
@@ -84,15 +81,7 @@ function Hero() {
             <p className="hero-greeting">Hello, I'm</p>
             <h1 className="hero-name">
               <span className="real-name">Bishnu Neupane</span>
-              <span className="alias" style={{
-                fontSize: '0.6em',
-                verticalAlign: 'middle',
-                marginLeft: '10px',
-                opacity: 0.8,
-                fontStyle: 'italic',
-                fontWeight: '400',
-                color: 'var(--accent-color, #94a3b8)'
-              }}> (@ynubsec)</span>
+              <span className="hero-alias"> (@ynubsec)</span>
             </h1>
 
             <h2 className="role rotating-text">
@@ -100,8 +89,8 @@ function Hero() {
             </h2>
 
             <p className="intro-text">
-              A passionate +2 student from Kathmandu, dedicated to crafting
-              beautiful web experiences and exploring the world of cybersecurity.
+              A passionate +2 student from Kathmandu, building thoughtful web
+              experiences and exploring the world of cybersecurity.
             </p>
 
             <div className="hero-buttons">

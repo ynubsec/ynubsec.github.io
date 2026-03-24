@@ -1,72 +1,54 @@
-/* ==================== TERMS & PRIVACY PAGES ==================== */
-
 .terms-page,
 .policy-page {
-  padding: 80px 60px;
-  max-width: none;
-  margin-left: 85px;
-  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 1.5rem var(--content-pad) 5rem;
   color: #fff;
   line-height: 1.8;
-  background: transparent;
-  min-height: 100vh;
 }
 
-.section-title,
-.sub-title,
 .terms-page h1,
 .policy-page h1 {
-  color: #fff;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 30px;
+  margin: 0 0 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .terms-list,
 .policy-list {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  gap: 0.85rem;
 }
 
 .terms-list li,
 .policy-list li {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.2rem;
+  border-radius: 2px;
+  border: 2px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(15px);
-  border-left: 3px solid rgba(255, 255, 255, 0.3);
-  padding: 18px 22px;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 1.7;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.72);
 }
 
-.terms-list li:hover,
-.policy-list li:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-left-color: rgba(255, 255, 255, 0.5);
+.terms-list li::before,
+.policy-list li::before {
+  content: "";
+  position: absolute;
+  top: 1.15rem;
+  left: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #fff;
 }
 
-.footer-note {
-  color: rgba(255, 255, 255, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 25px;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
+.footer-note,
 .updated {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .policy-list a,
@@ -76,32 +58,9 @@
   text-underline-offset: 3px;
 }
 
-.policy-list a:hover,
-.terms-list a:hover {
-  opacity: 0.8;
-}
-
-/* Responsive */
 @media (max-width: 900px) {
-
-  .policy-page,
-  .terms-page {
-    margin-left: 0;
-    padding: 50px 30px;
-    padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .policy-page h1,
-  .terms-page h1 {
-    font-size: 24px;
-  }
-
-  .policy-list li,
-  .terms-list li {
-    padding: 15px 18px;
-    font-size: 14px;
+  .terms-page,
+  .policy-page {
+    padding-bottom: 6rem;
   }
 }

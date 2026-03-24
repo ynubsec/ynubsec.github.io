@@ -56,12 +56,8 @@ export default function ContactForm() {
       </p>
 
       <p>
-        <button
-          type="submit"
-          style={{ height: "40px", padding: "0 20px" }}
-          className="btn footer-btn"
-        >
-          Submit😊
+        <button type="submit" className="btn footer-btn">
+          Send Message
         </button>
       </p>
 
