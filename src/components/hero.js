@@ -89,8 +89,9 @@ function Hero() {
             </h2>
 
             <p className="intro-text">
-              A passionate +2 student from Kathmandu, building thoughtful web
-              experiences and exploring the world of cybersecurity.
+            <span style={{fontWeight:"bold"}}>Web dev ×  Cybersecurity</span>
+            <br />
+             Enthusiast learning through projects, courses, and hands-on practice. Building a strong foundation in frontend development while exploring security concepts and ethical hacking.
             </p>
 
             <div className="hero-buttons">
