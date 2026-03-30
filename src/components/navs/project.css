@@ -29,18 +29,26 @@
   grid-template-columns: 240px minmax(0, 1fr);
   gap: 1.25rem;
   align-items: center;
-  padding: 1.25rem;
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  border: 2px solid var(--border);
+  padding: 1.3rem;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.26);
 }
 
 .project-item img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -52,7 +60,7 @@
 
 .project-item h3 {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   line-height: 1;
   color: #fff;
   text-transform: uppercase;
@@ -89,5 +97,13 @@
 @media (max-width: 600px) {
   .project-item {
     padding: 1rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-link {
+    width: 100%;
   }
 }

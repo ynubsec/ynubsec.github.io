@@ -123,7 +123,7 @@ function Hero() {
               </a>
 
               <a
-                href="https://ynubsec.github.io/newsletter/"
+                href="https://ynubsec.github.io/blogs/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -143,7 +143,7 @@ function Hero() {
         </div>
       </section >
     </>
-  );
+    );
 }
 
 export default Hero;

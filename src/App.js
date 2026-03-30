@@ -38,8 +38,8 @@ function HomePage() {
   return (
     <>
       <QuickNav />
-      <section id="home"><Hero /></section>
-      <section id="about"><About /></section>
+      <Hero />
+      <About />
 
       <Footer />
     </>
@@ -61,10 +61,10 @@ function SkillsPage() {
 function GalleryPage() {
   return (
     <>
-      <div className="gallery-layout">
+      <div className="gallery-layout" style={{ backgroundColor: '#000000', padding: '20px',marginLeft:"10px" }}>
         <Photos />
 
-        <div className="gallery-profile-area">
+        <div className="gallery-profile-area" style={{ marginLeft: "6rem" }}>
           <h2 className="gallery-profile-title">Profile Card</h2>
 
           <section className="gallery-profile-stage">

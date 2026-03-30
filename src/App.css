@@ -376,14 +376,6 @@
   margin-bottom: 1.2rem;
 }
 
-.about-header h1 {
-  margin: 0 0 0.75rem;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: -0.05em;
-  color: #fff;
-}
-
 .about-header p {
   margin: 0;
   max-width: 74ch;
@@ -922,6 +914,10 @@
     width: 100%;
   }
 
+  .quick-nav-shell {
+    margin-left: 0;
+  }
+
   .hero {
     min-height: auto;
     padding-top: 4rem;
@@ -935,24 +931,53 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding-inline: 1.15rem;
-    padding-bottom: 4rem;
+    padding: 1.6rem 1rem 2.4rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-content {
+    gap: 1.25rem;
   }
 
   .hero-img {
-    width: 210px;
-    height: 210px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-greeting {
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-name {
+    font-size: clamp(2.15rem, 12vw, 3rem);
+    line-height: 0.98;
+  }
+
+  .hero-alias {
+    display: block;
+    margin: 0.2rem 0 0;
+    font-size: 0.48em;
+  }
+
+  .rotating-text {
+    display: none;
+  }
+
+  .intro-text {
+    margin-top: 1rem;
+    font-size: 0.94rem;
+    line-height: 1.7;
   }
 
   .hero-buttons {
-    flex-direction: column;
+    display: none;
   }
 
-  .btn,
-  .btn-outline,
-  .cv-download,
-  .home-btn {
-    width: 100%;
+  .hero-social,
+  .cv-link {
+    display: none;
   }
 
   .about-us,
@@ -961,8 +986,8 @@
   .contact-page,
   .policy-page,
   .gallery-layout {
-    padding-inline: 1.15rem;
-    padding-bottom: 4rem;
+    padding-inline: 1rem;
+    padding-bottom: 3.5rem;
   }
 
   .about-grid,
@@ -971,12 +996,36 @@
   }
 
   .quick-nav {
-    padding-inline: 1.15rem;
+    padding: 0.55rem 1rem 0.55rem 3rem;
+    display: flex;
+    gap: 0.55rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.55rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .quick-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .quick-nav-item {
-    width: 100%;
+    margin:20px;
+    flex: 0 0 auto;
+    min-width: 3.2rem;
+    min-height: 3.2rem;
+    padding: 0.6rem 0.75rem;
     justify-content: center;
+  }
+
+  .quick-nav-item span {
+    display: none;
+  }
+
+  .quick-nav-item i {
+    font-size: 1rem;
   }
 
   .gallery-profile-stage {

@@ -20,7 +20,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>HTML</h1>
+            <h3>HTML</h3>
             <p>
               Semantic HTML is the foundation of everything I build. I use it
               to create accessible, SEO-friendly, and well-organized pages.
@@ -36,7 +36,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>CSS</h1>
+            <h3>CSS</h3>
             <p>
               I use CSS to build responsive layouts, layered visuals, motion,
               and polished interactions with Flexbox, Grid, and animations.
@@ -52,7 +52,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>JavaScript</h1>
+            <h3>JavaScript</h3>
             <p>
               JavaScript powers the interactivity in my projects. I write
               modular ES6+ code, work with APIs, and build dynamic interfaces.
@@ -68,7 +68,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>React</h1>
+            <h3>React</h3>
             <p>
               React is my primary framework for building modern web
               applications with reusable components, hooks, and routing.
@@ -84,7 +84,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>Python</h1>
+            <h3>Python</h3>
             <p>
               Python helps me with automation, backend development, and
               cybersecurity workflows.
@@ -100,7 +100,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>Cybersecurity</h1>
+            <h3>Cybersecurity</h3>
             <p>
               I explore ethical hacking, Linux tools, network security, and
               secure coding practices to build safer digital experiences.
@@ -116,7 +116,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>Git & GitHub</h1>
+            <h3>Git & GitHub</h3>
             <p>
               I use Git for version control, branching, merging, and keeping a
               clean workflow across projects.
@@ -132,7 +132,7 @@ function Skills() {
             height="50"
           />
           <div className="skill-copy">
-            <h1>VS Code</h1>
+            <h3>VS Code</h3>
             <p>
               VS Code is my main development environment for building, testing,
               and iterating quickly.

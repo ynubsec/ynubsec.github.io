@@ -30,10 +30,18 @@
 
 .review-card {
   padding: 1.25rem;
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  border: 2px solid var(--border);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.26);
 }
 
 .review-header {
@@ -46,7 +54,7 @@
 .review-avatar {
   width: 58px;
   height: 58px;
-  border-radius: 2px;
+  border-radius: 12px;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
@@ -58,7 +66,7 @@
 
 .review-name {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -77,5 +85,15 @@
 @media (max-width: 900px) {
   .reviews-section {
     padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 1rem;
   }
 }
