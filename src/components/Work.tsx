@@ -3,7 +3,7 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import { placeholder } from "../assets/images";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
