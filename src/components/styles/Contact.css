@@ -1,92 +1,152 @@
 .contact-section {
   margin: auto;
-  padding-bottom: 100px;
-  margin-top: 100px;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  border-top: 1px solid #1a1a1a;
 }
-.contact-section h3 {
-  font-size: 60px;
-  font-weight: 400;
+
+/* Hero part */
+.contact-hero {
+  margin-bottom: 40px;
+}
+.contact-eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 0;
+  color: var(--accentColor);
+  margin-bottom: 12px;
 }
-.contact-flex {
-  display: flex;
-  justify-content: space-between;
+.contact-title {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px;
+  text-transform: uppercase;
 }
-.contact-flex h4 {
-  font-weight: 500;
-  margin: 0;
-  opacity: 0.6;
-}
-.contact-box {
-  display: flex;
-  flex-direction: column;
-}
-.contact-flex p {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-a.contact-social {
-  font-size: 25px;
-  border-bottom: 1px solid #ccc;
-}
-.contact-box h2 {
-  font-weight: 400;
-  font-size: 23px;
-  margin: 0;
-}
-.contact-box h2 > span {
+.contact-title span {
   color: var(--accentColor);
 }
-.contact-box h5 {
-  font-size: 20px;
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--accentColor);
+  color: #0b080c;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s, filter 0.3s;
+}
+.contact-btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
+}
+
+/* Grid part */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.contact-box h4 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 12px;
   font-weight: 500;
-  line-height: 20px;
+}
+
+.contact-details-wrap p {
+  margin: 0 0 10px;
+}
+.contact-details-wrap a {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 500;
+  text-decoration: none;
+  color: #eae5ec;
+  transition: color 0.3s;
+}
+.contact-details-wrap a:hover {
+  color: var(--accentColor);
+}
+
+.contact-social-wrap {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  opacity: 0.5;
 }
-@media only screen and (max-width: 1600px) {
-  .contact-section h3 {
-    font-size: 50px;
-  }
-  .contact-box h2 {
-    font-size: 20px;
-  }
-  a.contact-social {
-    font-size: 22px;
-  }
+a.contact-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400;
+  text-decoration: none;
+  color: #eae5ec;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 8px;
+  transition: color 0.3s, border-color 0.3s;
 }
-@media only screen and (max-width: 1300px) {
-  .contact-section h3 {
-    font-size: 40px;
-  }
-  .contact-box h2 {
-    font-size: 18px;
-  }
-  a.contact-social {
-    font-size: 20px;
-  }
-  .contact-flex p {
-    margin-top: 0px;
-  }
+a.contact-social:hover {
+  color: var(--accentColor);
+  border-color: var(--accentColor);
 }
-@media only screen and (max-width: 900px) {
-  .contact-flex {
+
+/* Footer part */
+.contact-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.contact-footer h5 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+.contact-footer h5 span {
+  color: #eae5ec;
+}
+.back-to-top {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-to-top:hover {
+  color: var(--accentColor);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-title {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .contact-footer {
     flex-direction: column;
-    gap: 40px;
-  }
-  .contact-flex p {
-    margin-bottom: 0px;
-  }
-  .contact-flex h4 {
-    margin-top: 20px;
-  }
-  .contact-section {
-    margin-top: 50px;
-    padding-bottom: 50px;
-  }
-  .contact-container {
-    width: calc(100% - 25px);
+    gap: 12px;
+    align-items: flex-start;
   }
 }

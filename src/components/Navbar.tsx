@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
@@ -40,32 +41,52 @@ export let smoother: SmootherLike = {
 };
 
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isProjectsPage = location.pathname === "/projects";
+
   useEffect(() => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true);
-        }
-      });
-    });
     window.addEventListener("resize", () => {
       ScrollTrigger.refresh(true);
     });
   }, []);
+
+  // Check if hash exists on mount and scroll to it
+  useEffect(() => {
+    if (location.hash && !isProjectsPage) {
+      setTimeout(() => {
+        const el = document.querySelector(location.hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); // Wait for render
+    }
+  }, [location.pathname, location.hash, isProjectsPage]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    if (window.innerWidth <= 1024) return;
+    
+    e.preventDefault();
+    const targetEl = document.querySelector(hash);
+    
+    if (targetEl) {
+      // Element is on current page, smooth scroll directly
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // Element is on different page, use client-side router navigation
+      navigate(`/${hash}`);
+    }
+  };
+
   return (
     <>
       <div className="header">
-        <a href="/" className="navbar-title" data-cursor="disable">
+        <Link to="/" className="navbar-title" data-cursor="disable">
           YNUBSEC
-        </a>
+        </Link>
         <a
           href="mailto:contact.ynub@gmail.com"
           className="navbar-connect"
@@ -75,17 +96,23 @@ const Navbar = () => {
         </a>
         <ul>
           <li>
-            <a data-href="#about" href="#about">
+            <a href="/#about" onClick={(e) => handleNavClick(e, "#about")} data-cursor="disable">
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a href="/projects" data-cursor="disable">
-              <HoverLinks text="PROJECTS" />
-            </a>
+            {isProjectsPage ? (
+              <Link to="/" data-cursor="disable">
+                <HoverLinks text="HOME" />
+              </Link>
+            ) : (
+              <Link to="/projects" data-cursor="disable">
+                <HoverLinks text="PROJECTS" />
+              </Link>
+            )}
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} data-cursor="disable">
               <HoverLinks text="CONTACT" />
             </a>
           </li>

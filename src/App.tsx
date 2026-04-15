@@ -10,11 +10,11 @@ import { LoadingProvider } from "./context/LoadingProvider";
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <LoadingProvider>
+      <LoadingProvider>
+        <Routes>
+          <Route
+            path="/"
+            element={
               <Suspense>
                 <MainContainer>
                   <Suspense>
@@ -22,18 +22,18 @@ const App = () => {
                   </Suspense>
                 </MainContainer>
               </Suspense>
-            </LoadingProvider>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <Suspense fallback={<div style={{ background: "#0b080c", minHeight: "100vh" }} />}>
-              <Projects />
-            </Suspense>
-          }
-        />
-      </Routes>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <Suspense fallback={<div style={{ background: "#0b080c", minHeight: "100vh" }} />}>
+                <Projects />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </LoadingProvider>
     </BrowserRouter>
   );
 };
