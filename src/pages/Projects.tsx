@@ -52,7 +52,7 @@ const Projects = () => {
   const [active, setActive] = useState("All");
 
   useEffect(() => {
-    document.title = "Projects | YNUBSEC";
+    document.title = "| YNUBSEC ";
     const previousHtmlOverflow = document.documentElement.style.overflow;
     const previousBodyOverflow = document.body.style.overflow;
     const previousBodyOverflowY = document.body.style.overflowY;
