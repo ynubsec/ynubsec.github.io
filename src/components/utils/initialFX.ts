@@ -33,19 +33,15 @@ export function initialFX() {
     }
   );
 
-  let TextProps = { type: "chars,lines", linesClass: "split-h2" };
-
-  var landingText2 = new SplitText(".landing-h2-info", TextProps);
   gsap.fromTo(
-    landingText2.chars,
-    { opacity: 0, y: 80, filter: "blur(5px)" },
+    ".landing-h2-1",
+    { opacity: 0, y: 30, filter: "blur(5px)" },
     {
       opacity: 1,
       duration: 1.2,
       filter: "blur(0px)",
       ease: "power3.inOut",
       y: 0,
-      stagger: 0.025,
       delay: 0.3,
     }
   );
@@ -72,69 +68,47 @@ export function initialFX() {
     }
   );
 
-  var landingText3 = new SplitText(".landing-h2-info-1", TextProps);
-  var landingText4 = new SplitText(".landing-h2-1", TextProps);
-  var landingText5 = new SplitText(".landing-h2-2", TextProps);
-
-  LoopText(landingText2, landingText3);
-  LoopText(landingText4, landingText5);
+  loopWords();
 }
 
-function LoopText(Text1: SplitText, Text2: SplitText) {
-  gsap.set(Text2.chars, { opacity: 0, y: 80 });
-  
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  const delay = 4;
-  const delay2 = delay * 2 + 1;
+function loopWords() {
+  gsap.set(".landing-h2-1", { opacity: 1, y: 0 });
+  gsap.set(".landing-h2-2", { opacity: 0, y: 20 });
 
-  tl.fromTo(
-    Text2.chars,
-    { opacity: 0, y: 80 },
-    {
-      opacity: 1,
-      duration: 1.2,
-      ease: "power3.inOut",
-      y: 0,
-      stagger: 0.1,
-      delay: delay,
-    },
-    0
-  )
-    .fromTo(
-      Text1.chars,
-      { y: 80 },
-      {
-        duration: 1.2,
-        ease: "power3.inOut",
-        y: 0,
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    )
-    .fromTo(
-      Text1.chars,
-      { y: 0 },
-      {
-        opacity: 0,
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay,
-      },
-      0
-    )
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.8 });
+
+  tl.to(".landing-h2-1", {
+    opacity: 0,
+    y: -20,
+    duration: 0.7,
+    ease: "power2.inOut",
+    delay: 3.2,
+  })
     .to(
-      Text2.chars,
+      ".landing-h2-2",
       {
-        opacity: 0,
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay2,
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power2.inOut",
       },
-      1
+      "<"
+    )
+    .to(".landing-h2-2", {
+      opacity: 0,
+      y: -20,
+      duration: 0.7,
+      ease: "power2.inOut",
+      delay: 3.2,
+    })
+    .to(
+      ".landing-h2-1",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power2.inOut",
+      },
+      "<"
     );
 }

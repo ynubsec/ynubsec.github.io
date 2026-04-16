@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import setCharacter from "./utils/character";
 import setLighting from "./utils/lighting";
 import { useLoading } from "../../context/LoadingProvider";
@@ -19,13 +20,19 @@ const Scene = () => {
   const sceneRef = useRef(new THREE.Scene());
   const { setLoading } = useLoading();
 
-  const [character, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
     if (canvasDiv.current) {
+      let disposed = false;
+      let introTimer: number | undefined;
+      let rafId: number | undefined;
+
       let rect = canvasDiv.current.getBoundingClientRect();
       let container = { width: rect.width, height: rect.height };
       const aspect = container.width / container.height;
       const scene = sceneRef.current;
+
+      // Ensure only one canvas exists in the container.
+      canvasDiv.current.innerHTML = "";
 
       const renderer = new THREE.WebGLRenderer({
         alpha: true,
@@ -46,32 +53,44 @@ const Scene = () => {
       let headBone: THREE.Object3D | null = null;
       let screenLight: any | null = null;
       let mixer: THREE.AnimationMixer;
+      let loadedCharacter: THREE.Object3D | null = null;
 
       const clock = new THREE.Clock();
 
       const light = setLighting(scene);
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
+      let hoverCleanup: (() => void) | undefined;
+
+      const onResize = () => {
+        if (!disposed && loadedCharacter) {
+          handleResize(renderer, camera, canvasDiv, loadedCharacter);
+        }
+      };
 
       loadCharacter().then((gltf) => {
+        if (!gltf || disposed) return;
+
         if (gltf) {
           const animations = setAnimations(gltf);
-          hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
+          if (hoverDivRef.current) {
+            hoverCleanup = animations.hover(gltf, hoverDivRef.current);
+          }
           mixer = animations.mixer;
           let character = gltf.scene;
-          setChar(character);
+          loadedCharacter = character;
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
-            setTimeout(() => {
+            if (disposed) return;
+            introTimer = window.setTimeout(() => {
+              if (disposed) return;
               light.turnOnLights();
               animations.startIntro();
             }, 2500);
           });
-          window.addEventListener("resize", () =>
-            handleResize(renderer, camera, canvasDiv, character)
-          );
+          window.addEventListener("resize", onResize);
         }
       });
 
@@ -81,33 +100,38 @@ const Scene = () => {
       const onMouseMove = (event: MouseEvent) => {
         handleMouseMove(event, (x, y) => (mouse = { x, y }));
       };
+
+      const onTouchMoveHandler = (event: TouchEvent) => {
+        handleTouchMove(event, (x, y) => (mouse = { x, y }));
+      };
+
       let debounce: number | undefined;
       const onTouchStart = (event: TouchEvent) => {
         const element = event.target as HTMLElement;
         debounce = setTimeout(() => {
-          element?.addEventListener("touchmove", (e: TouchEvent) =>
-            handleTouchMove(e, (x, y) => (mouse = { x, y }))
-          );
+          element?.addEventListener("touchmove", onTouchMoveHandler);
         }, 200);
       };
 
       const onTouchEnd = () => {
+        const landingElement = document.getElementById("landingDiv");
+        landingElement?.removeEventListener("touchmove", onTouchMoveHandler);
         handleTouchEnd((x, y, interpolationX, interpolationY) => {
           mouse = { x, y };
           interpolation = { x: interpolationX, y: interpolationY };
         });
       };
 
-      document.addEventListener("mousemove", (event) => {
-        onMouseMove(event);
-      });
+      document.addEventListener("mousemove", onMouseMove);
       const landingDiv = document.getElementById("landingDiv");
       if (landingDiv) {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+
       const animate = () => {
-        requestAnimationFrame(animate);
+        if (disposed) return;
+        rafId = requestAnimationFrame(animate);
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -125,19 +149,29 @@ const Scene = () => {
         }
         renderer.render(scene, camera);
       };
+
       animate();
+
       return () => {
+        disposed = true;
         clearTimeout(debounce);
+        if (introTimer) {
+          clearTimeout(introTimer);
+        }
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+        }
+        hoverCleanup?.();
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         scene.clear();
         renderer.dispose();
-        window.removeEventListener("resize", () =>
-          handleResize(renderer, camera, canvasDiv, character!)
-        );
+        window.removeEventListener("resize", onResize);
+        document.removeEventListener("mousemove", onMouseMove);
         if (canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
         }
         if (landingDiv) {
-          document.removeEventListener("mousemove", onMouseMove);
+          landingDiv.removeEventListener("touchmove", onTouchMoveHandler);
           landingDiv.removeEventListener("touchstart", onTouchStart);
           landingDiv.removeEventListener("touchend", onTouchEnd);
         }

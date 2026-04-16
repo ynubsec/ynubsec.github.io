@@ -53,13 +53,20 @@ const Projects = () => {
 
   useEffect(() => {
     document.title = "Projects | YNUBSEC";
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousBodyOverflowY = document.body.style.overflowY;
+
     // Override the global `body { overflow: hidden }` from index.css
     document.documentElement.style.overflow = "auto";
     document.body.style.overflow = "auto";
+    document.body.style.overflowY = "auto";
     window.scrollTo(0, 0);
+
     return () => {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.overflowY = previousBodyOverflowY;
     };
   }, []);
 

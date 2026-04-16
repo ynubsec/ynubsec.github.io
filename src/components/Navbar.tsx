@@ -14,6 +14,16 @@ type SmootherLike = {
 };
 
 let isPaused = false;
+
+const getCookieValue = (name: string) => {
+  const key = `${name}=`;
+  const row = document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(key));
+  return row ? decodeURIComponent(row.slice(key.length)) : "";
+};
+
 export let smoother: SmootherLike = {
   paused(value?: boolean) {
     if (typeof value === "boolean") {
@@ -44,15 +54,25 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isProjectsPage = location.pathname === "/projects";
+  const shouldRestoreHomeScroll =
+    location.pathname === "/" && getCookieValue("restoreHomeScroll") === "1";
 
   useEffect(() => {
-    smoother.scrollTop(0);
+    if (!shouldRestoreHomeScroll) {
+      smoother.scrollTop(0);
+    }
     smoother.paused(true);
 
-    window.addEventListener("resize", () => {
+    const onResize = () => {
       ScrollTrigger.refresh(true);
-    });
-  }, []);
+    };
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, [shouldRestoreHomeScroll]);
 
   // Check if hash exists on mount and scroll to it
   useEffect(() => {
@@ -81,47 +101,60 @@ const Navbar = () => {
     }
   };
 
+  const handleBackClick = () => {
+    navigate("/");
+  };
+
   return (
     <>
-      <div className="header">
-        <Link to="/" className="navbar-title" data-cursor="disable">
-          YNUBSEC
-        </Link>
-        <a
-          href="mailto:contact.ynub@gmail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          contact.ynub@gmail.com
-        </a>
-        <ul>
-          <li>
-            <a href="/#about" onClick={(e) => handleNavClick(e, "#about")} data-cursor="disable">
-              <HoverLinks text="ABOUT" />
+      {isProjectsPage ? (
+        <div className="header header-projects">
+          <button
+            type="button"
+            className="navbar-back navbar-back-button"
+            data-cursor="disable"
+            onClick={handleBackClick}
+          >
+            <HoverLinks text="BACK" />
+          </button>
+        </div>
+      ) : (
+        <>
+          <div className="header">
+            <Link to="/" className="navbar-title" data-cursor="disable">
+              YNUBSEC
+            </Link>
+            <a
+              href="mailto:contact.ynub@gmail.com"
+              className="navbar-connect"
+              data-cursor="disable"
+            >
+              contact.ynub@gmail.com
             </a>
-          </li>
-          <li>
-            {isProjectsPage ? (
-              <Link to="/" data-cursor="disable">
-                <HoverLinks text="HOME" />
-              </Link>
-            ) : (
-              <Link to="/projects" data-cursor="disable">
-                <HoverLinks text="PROJECTS" />
-              </Link>
-            )}
-          </li>
-          <li>
-            <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} data-cursor="disable">
-              <HoverLinks text="CONTACT" />
-            </a>
-          </li>
-        </ul>
-      </div>
+            <ul>
+              <li>
+                <a href="/#about" onClick={(e) => handleNavClick(e, "#about")} data-cursor="disable">
+                  <HoverLinks text="ABOUT" />
+                </a>
+              </li>
+              <li>
+                <Link to="/projects" data-cursor="disable">
+                  <HoverLinks text="PROJECTS" />
+                </Link>
+              </li>
+              <li>
+                <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} data-cursor="disable">
+                  <HoverLinks text="CONTACT" />
+                </a>
+              </li>
+            </ul>
+          </div>
 
-      <div className="landing-circle1"></div>
-      <div className="landing-circle2"></div>
-      <div className="nav-fade"></div>
+          <div className="landing-circle1"></div>
+          <div className="landing-circle2"></div>
+          <div className="nav-fade"></div>
+        </>
+      )}
     </>
   );
 };

@@ -74,6 +74,19 @@ body {
   overflow-x: hidden;
 }
 
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 .main-body {
   max-width: 100vw;
   overflow-x: hidden;
