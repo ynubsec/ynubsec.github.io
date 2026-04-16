@@ -72,6 +72,42 @@ div.resume-button span {
   display: flex;
   align-items: center;
 }
+
+.blogs-button {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  gap: 5px;
+  bottom: 40px;
+  right: 0;
+  width: auto;
+  text-wrap: nowrap;
+  letter-spacing: 4px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 600;
+  color: #5e5e5e;
+  cursor: pointer;
+  transition: 0.5s;
+  transform-origin: left bottom;
+  transform: translateX(100%) rotateZ(-90deg);
+}
+@media only screen and (max-width: 900px) {
+  .blogs-button {
+    margin-right: 20px;
+  }
+}
+.blogs-button
+.blogs-button:hover {
+  color: #fff;
+}
+div.blogs-button span {
+  color: #fff;
+  font-size: 17px;
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+}
 .check-line {
   position: fixed;
   top: 655px;

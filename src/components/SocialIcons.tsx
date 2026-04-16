@@ -86,7 +86,7 @@ const SocialIcons = () => {
           <TbNotes />
         </span>
       </a>
-      <a className="resume-button" data-cursor="blogs" style={{ marginBottom: "40px" }} href="https://ynubsec.tech/blogs" target="_blank" rel="noopener noreferrer">
+      <a className="blogs-button" data-cursor="blogs" style={{ marginBottom: "40px" }} href="https://ynubsec.tech/blogs" target="_blank" rel="noopener noreferrer">
         <HoverLinks text="BLOGS" />
         <span>
         </span>
