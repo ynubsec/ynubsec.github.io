@@ -10,24 +10,29 @@
   margin: auto;
 }
 .about-me {
-  padding: 50px 0px;
+  padding: 50px 0;
   padding-bottom: 0;
   width: 500px;
   max-width: calc(100% - 15px);
 }
 .about-me h3 {
-  font-size: 25px;
+  font-size: 24px;
   text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
+  letter-spacing: 4px;
+  font-weight: 600;
   color: var(--accentColor);
+  text-shadow: 0 0 15px rgba(155, 109, 217, 0.7), 0 0 30px rgba(155, 109, 217, 0.4);
+  margin: 0 0 18px;
 }
 
 .about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  margin: 0;
+  font-size: clamp(1.06rem, 1.25vw, 1.32rem);
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: 0.1px;
+  color: #d8d3df;
+  max-width: 36ch;
 }
 
 @media only screen and (min-width: 600px) {
@@ -55,17 +60,16 @@
     opacity: 1;
   }
   .about-me {
-    padding: 0px;
+    padding: 0;
     width: 50%;
   }
   .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+    max-width: 34ch;
   }
 }
 @media only screen and (min-width: 1950px) {
   .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+    font-size: 1.45rem;
+    line-height: 2.35rem;
   }
 }

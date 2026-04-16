@@ -6,9 +6,16 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I’m Bishnu Neupane, an aspiring cybersecurity professional with a growing foundation in C, Python and JavaScript. I focus on building practical, efficient solutions while continuously strengthening my problem-solving skills.
-
-          I’m also developing YNUBSEC, where I apply my knowledge to create clean, functional, and user-focused web projects. My goal is to build a strong career in cybersecurity while expanding my expertise in modern technologies.
+          I am Bishnu Neupane, an aspiring cybersecurity professional with a strong
+          foundation in C, Python, and JavaScript. I focus on building practical,
+          efficient solutions while continuously improving my problem-solving and
+          analytical skills.
+          <br />
+          <br />
+          I am also building YNUBSEC, where I apply what I learn to create clean,
+          functional, and user-focused web experiences. My goal is to build a
+          meaningful career in cybersecurity while expanding my expertise across
+          modern technologies.
         </p>
       </div>
     </div>

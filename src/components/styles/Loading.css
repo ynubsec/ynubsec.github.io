@@ -70,7 +70,7 @@
   overflow: visible;
 }
 .loading-hover {
-  background-color: #a87cff;
+  background-color: #4a3a6f;
   width: 250px;
   height: 120px;
   position: absolute;
@@ -78,7 +78,7 @@
   left: var(--mouse-x);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(30px);
+  filter: blur(60px);
   opacity: 1;
   transition: opacity 500ms;
 }

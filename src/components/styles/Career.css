@@ -15,15 +15,16 @@
 .career-section h2 {
   font-size: 70px;
   line-height: 70px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
-  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  background: linear-gradient(0deg, #2a0a6f, #9b6dd9);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   margin-top: 50px;
   margin-bottom: 90px;
+  text-shadow: 0 0 30px rgba(155, 109, 217, 0.5);
 }
 .career-section h2 > span {
   font-family: "Geist", sans-serif;
@@ -55,7 +56,7 @@
 .career-info h3 {
   font-size: 48px;
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 45px;
 }
 
@@ -63,16 +64,17 @@
   font-size: 33px;
   line-height: 30px;
   letter-spacing: 0.8px;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
 }
 .career-info h5 {
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.7px;
   font-size: 20px;
   text-transform: capitalize;
   margin: 10px 0px;
   color: var(--accentColor);
+  text-shadow: 0 0 10px rgba(155, 109, 217, 0.6), 0 0 20px rgba(155, 109, 217, 0.3);
 }
 .career-timeline {
   position: absolute;
@@ -83,7 +85,7 @@
   height: 100%;
   background-image: linear-gradient(
     to top,
-    #aa42ff 20%,
+    #4a0f9f 20%,
     var(--accentColor) 50%,
     transparent 95%
   );
@@ -94,12 +96,15 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: #aa42ff;
+  background: radial-gradient(circle, rgba(155, 109, 217, 0.8), rgba(100, 60, 160, 0.5));
   width: 10px;
   height: 10px;
   border-radius: 50px;
-  box-shadow: 0px 0px 5px 2px #d29bff, 0px 0px 15px 8px #d097ff,
-    0px 0px 110px 20px #f2c0ff;
+  box-shadow: 
+    0px 0px 10px 4px rgba(155, 109, 217, 0.7),
+    0px 0px 30px 15px rgba(155, 109, 217, 0.5),
+    0px 0px 80px 35px rgba(155, 109, 217, 0.3),
+    0px 0px 150px 50px rgba(155, 109, 217, 0.2);
   animation: timeline 0.8s linear infinite forwards;
 }
 
@@ -109,7 +114,7 @@
   50%,
   70%,
   90% {
-    box-shadow: 0px 0px 5px 2px #d29bff;
+    box-shadow: 0px 0px 10px 4px rgba(155, 109, 217, 0.7);
   }
   10%,
   30%,
@@ -117,17 +122,23 @@
   100%,
   64%,
   80% {
-    box-shadow: 0px 0px 5px 2px #d29bff, 0px 0px 15px 5px #d097ff,
-      0px 0px 110px 20px #f2c0ff;
+    box-shadow: 
+      0px 0px 10px 4px rgba(155, 109, 217, 0.7),
+      0px 0px 30px 15px rgba(155, 109, 217, 0.5),
+      0px 0px 80px 35px rgba(155, 109, 217, 0.3),
+      0px 0px 150px 50px rgba(155, 109, 217, 0.2);
   }
 }
 @keyframes timeline2 {
   0% {
-    box-shadow: 0px 0px 5px 2px #d29bff;
+    box-shadow: 0px 0px 10px 4px rgba(155, 109, 217, 0.7);
   }
   100% {
-    box-shadow: 0px 0px 5px 2px #d29bff, 0px 0px 15px 5px #d097ff,
-      0px 0px 110px 20px #f2c0ff;
+    box-shadow: 
+      0px 0px 10px 4px rgba(155, 109, 217, 0.7),
+      0px 0px 30px 15px rgba(155, 109, 217, 0.5),
+      0px 0px 80px 35px rgba(155, 109, 217, 0.3),
+      0px 0px 150px 50px rgba(155, 109, 217, 0.2);
   }
 }
 @media only screen and (max-width: 1400px) {

@@ -1,10 +1,13 @@
 .work-section h2 {
   margin-top: 100px;
   font-size: 70px;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -1px;
 }
 .work-section h2 > span {
   color: var(--accentColor);
+  text-shadow: 0 0 15px rgba(155, 109, 217, 0.7), 0 0 30px rgba(155, 109, 217, 0.4);
 }
 .work-section {
   transition: 0s;
@@ -33,27 +36,12 @@
   flex-direction: column;
   width: 600px;
   box-sizing: border-box;
-  border-right: 1px solid #363636;
   flex-shrink: 0;
   gap: 50px;
   justify-content: start;
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;
-}
-.work-flex::before,
-.work-flex::after {
-  content: "";
-  width: calc(50000vw);
-  height: 1px;
-  background-color: #363636;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-.work-flex::after {
-  top: 100%;
 }
 .work-title {
   justify-content: space-between;
@@ -66,19 +54,21 @@
 }
 .work-title h3 {
   font-size: 50px;
-  line-height: 50px;
+  line-height: 56px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .work-info h4 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
+  letter-spacing: 0.5px;
 }
 .work-info p {
   font-weight: 200;
-  color: #adacac;
+  color: #6a6a6a;
   margin: 0;
   margin-top: 3px;
 }
@@ -105,8 +95,8 @@
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5),
-    inset 0px 0px 10px 0px #393939;
+  box-shadow: 0px 0px 30px 3px rgba(155, 109, 217, 0.7),
+    inset 0px 0px 20px 0px rgba(155, 109, 217, 0.5);
   transition: 0.3s;
   opacity: 0;
 }

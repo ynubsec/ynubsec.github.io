@@ -5,7 +5,7 @@
 
   font-optical-sizing: auto;
   font-style: normal;
-  line-height: 1.5;
+    line-height: 1.6;
   scroll-behavior: smooth;
   color-scheme: light dark;
   color: #eae5ec;
@@ -18,8 +18,8 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
-  --backgroundColor: #0b080c;
+  --accentColor: #9b6dd9;
+  --backgroundColor: #020101;
   --vh: 100vh;
   --vh: 100svh;
 }

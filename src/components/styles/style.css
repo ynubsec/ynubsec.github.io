@@ -17,4 +17,5 @@
 .hover-link:hover .hover-in {
   transform: translateY(-100%);
   color: var(--accentColor);
+  text-shadow: 0 0 10px rgba(155, 109, 217, 0.6), 0 0 20px rgba(155, 109, 217, 0.3);
 }

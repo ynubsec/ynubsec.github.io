@@ -10,18 +10,21 @@
 
 .proj-header h2 {
   font-size: clamp(50px, 7vw, 90px);
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
   margin: 0 0 8px;
   text-transform: uppercase;
 }
 
 .proj-header h2 span {
   color: var(--accentColor);
+  text-shadow: 0 0 15px rgba(155, 109, 217, 0.7), 0 0 30px rgba(155, 109, 217, 0.4);
 }
 
 .proj-subtitle {
   font-size: 14px;
-  color: #555;
+  color: #444;
   letter-spacing: 0.5px;
   margin: 0;
 }
@@ -34,17 +37,18 @@
   gap: 10px;
   padding-top: 28px;
   padding-bottom: 28px;
-  border-top: 1px solid #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
+  border-top: 1px solid #0d0d0d;
+  border-bottom: 1px solid #0d0d0d;
 }
+  font-weight: 600;
 
 .proj-filter-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  border: 1px solid #2a2a2a;
-  color: #666;
+  background: rgba(20, 10, 35, 0.3);
+  border: 1px solid #0d0d0d;
+  color: #444;
   font-family: "Geist", sans-serif;
   font-size: 11px;
   letter-spacing: 1.5px;
@@ -56,15 +60,18 @@
 }
 
 .proj-filter-btn:hover {
-  border-color: #555;
+  border-color: rgba(155, 109, 217, 0.9);
   color: #eae5ec;
+  background: rgba(20, 10, 35, 0.6);
+  box-shadow: 0px 0px 25px rgba(155, 109, 217, 0.5);
 }
 
 .proj-filter-active {
   background: var(--accentColor) !important;
   border-color: var(--accentColor) !important;
-  color: #0b080c !important;
+  color: #020101 !important;
   font-weight: 700;
+  box-shadow: 0px 0px 40px rgba(155, 109, 217, 0.7);
 }
 
 .proj-filter-count {
@@ -89,7 +96,7 @@
   margin-left: 0 !important;
   padding-right: 0 !important;
   gap: 0 !important;
-  border-left: 1px solid #363636;
+  border-left: 1px solid #1a1a1a;
 }
 
 .proj-work-flex .work-box {
