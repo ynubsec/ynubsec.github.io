@@ -51,19 +51,72 @@
 }
 
 .navbar-back {
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .navbar-back-button {
-  background: transparent;
-  border: 0;
-  color: inherit;
-  padding: 0;
+  background: linear-gradient(135deg, rgba(40, 25, 55, 0.9) 0%, rgba(25, 15, 35, 0.95) 100%);
+  border: 1.5px solid rgba(194, 164, 255, 0.6);
+  color: #eae5ec;
+  padding: 11px 18px;
   margin: 0;
   font: inherit;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 4px 16px rgba(194, 164, 255, 0.12), 0 0 20px rgba(194, 164, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-back-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(194, 164, 255, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-back-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(55, 35, 75, 0.95) 0%, rgba(35, 20, 50, 0.98) 100%);
+  border-color: rgba(194, 164, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(194, 164, 255, 0.2), 0 0 30px rgba(194, 164, 255, 0.15);
+}
+
+.navbar-back-button:hover::before {
+  opacity: 1;
+}
+
+.navbar-back-button:active {
+  transform: translateY(0);
+}
+
+.navbar-back-button:focus-visible {
+  outline: 2px solid rgba(194, 164, 255, 0.95);
+  outline-offset: 3px;
+}
+
+.navbar-back-icon {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.navbar-back-button:hover .navbar-back-icon {
+  transform: translateX(-2px);
+}
+
+.navbar-back-text {
+  line-height: 1;
 }
 
 @media only screen and (min-width: 500px) {
@@ -83,7 +136,11 @@
   }
 
   .navbar-back {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .navbar-back-button {
+    padding: 11px 16px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -107,6 +164,10 @@
   }
 
   .navbar-back {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .navbar-back-button {
+    padding: 12px 18px;
   }
 }

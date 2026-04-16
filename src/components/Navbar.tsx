@@ -114,8 +114,10 @@ const Navbar = () => {
             className="navbar-back navbar-back-button"
             data-cursor="disable"
             onClick={handleBackClick}
+            aria-label="Back to home"
           >
-            <HoverLinks text="BACK" />
+            <span className="navbar-back-icon" aria-hidden="true">←</span>
+            <span className="navbar-back-text">Back to Home</span>
           </button>
         </div>
       ) : (
