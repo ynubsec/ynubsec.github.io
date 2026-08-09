@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subdomain Takeover Demonstration</title>
+
+  <style>
+    :root {
+      --bg: #080b12;
+      --panel: #111722;
+      --border: #263044;
+      --text: #e8edf7;
+      --muted: #8c98ad;
+      --red: #ff4757;
+      --green: #2ed573;
+      --blue: #4dabf7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 20%, #172238 0, transparent 40%),
+        var(--bg);
+    }
+
+    .container {
+      width: min(900px, 92%);
+      padding: 40px 0;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(17, 23, 34, 0.94);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    .header {
+      padding: 32px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border-radius: 999px;
+      color: #ffdfe2;
+      background: rgba(255, 71, 87, 0.12);
+      border: 1px solid rgba(255, 71, 87, 0.35);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 20px 0 10px;
+      font-size: clamp(28px, 5vw, 48px);
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 650px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .content {
+      padding: 32px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(46, 213, 115, .25);
+      border-radius: 12px;
+      background: rgba(46, 213, 115, .06);
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 14px var(--green);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .item {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      word-break: break-word;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 15px;
+    }
+
+    .attacker {
+      color: var(--red);
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      color: white;
+      background: var(--blue);
+      font-weight: 700;
+    }
+
+    button.secondary {
+      background: #242d3d;
+    }
+
+    #details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    #details.open {
+      max-height: 300px;
+      margin-top: 24px;
+    }
+
+    .details-inner {
+      padding: 20px;
+      border-radius: 12px;
+      background: #0b1019;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer {
+      padding: 20px 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header,
+      .content {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+
+      <header class="header">
+        <span class="badge">Security Demonstration</span>
+
+        <h1>Subdomain Takeover</h1>
+
+        <p class="subtitle">
+          This page demonstrates that a previously configured subdomain
+          can be controlled by an unauthorized third-party resource.
+        </p>
+      </header>
+
+      <div class="content">
+
+        <div class="status">
+          <span class="dot"></span>
+          <strong>Demonstration page active</strong>
+        </div>
+
+        <div class="grid">
+          <div class="item">
+            <div class="label">Affected subdomain</div>
+            <div class="value" id="hostname">example.subdomain.com</div>
+          </div>
+
+          <div class="item">
+            <div class="label">Reported by</div>
+            <div class="value attacker">
+              &lt;name of attacker&gt;
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="label">Vulnerability</div>
+            <div class="value">Subdomain takeover</div>
+          </div>
+
+          <div class="item">
+            <div class="label">Purpose</div>
+            <div class="value">Authorized security demonstration</div>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button onclick="toggleDetails()">
+            Show technical details
+          </button>
+
+          <button class="secondary" onclick="copyHostname()">
+            Copy hostname
+          </button>
+        </div>
+
+        <div id="details">
+          <div class="details-inner">
+            <strong>Security finding</strong><br><br>
+            The affected DNS configuration points to an external service
+            or resource that can be claimed independently of the original
+            domain owner. If the dangling configuration is claimable,
+            an attacker may be able to serve arbitrary content from the
+            affected subdomain.
+            <br><br>
+            This page is intended solely as a visual proof of concept.
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="footer">
+        Authorized security testing / proof-of-concept
+      </footer>
+
+    </section>
+  </main>
+
+  <script>
+    const hostname = document.getElementById("hostname");
+
+    // Display the current hostname when opened on an authorized test domain.
+    hostname.textContent = window.location.hostname;
+
+    function toggleDetails() {
+      document.getElementById("details").classList.toggle("open");
+    }
+
+    async function copyHostname() {
+      try {
+        await navigator.clipboard.writeText(window.location.hostname);
+        alert("Hostname copied.");
+      } catch {
+        alert(window.location.hostname);
+      }
+    }
+  </script>
+</body>
+</html>
