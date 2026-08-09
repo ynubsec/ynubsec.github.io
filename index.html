@@ -227,7 +227,7 @@
           <div class="item">
             <div class="label">Reported by</div>
             <div class="value attacker">
-              &lt;name of attacker&gt;
+              &lt;Evening69 with love ❤️&gt;
             </div>
           </div>
 
@@ -254,15 +254,24 @@
 
         <div id="details">
           <div class="details-inner">
-            <strong>Security finding</strong><br><br>
-            The affected DNS configuration points to an external service
-            or resource that can be claimed independently of the original
-            domain owner. If the dangling configuration is claimable,
-            an attacker may be able to serve arbitrary content from the
-            affected subdomain.
-            <br><br>
-            This page is intended solely as a visual proof of concept.
-          </div>
+  <strong>Security finding</strong><br><br>
+  The affected DNS configuration was still pointing to an old GitHub
+  username after the original account owner changed their username.
+  Since that username became available for registration, I was able to
+  create an account using it and host this page on the associated
+  repository.
+  <br><br>
+  This is a harmless proof of concept to show what can happen when an
+  old CNAME record is left pointing to a resource that is no longer
+  controlled by the original owner.
+  <br><br>
+  <strong>Sorry for the little surprise! ❤️</strong><br><br>
+  No harm intended — just a friendly reminder to update the CNAME and
+  remove the dangling reference.
+  <br><br>
+  <strong>With love, your annoying-but-caring friend. 😄</strong>
+</div>
+
         </div>
 
       </div>
