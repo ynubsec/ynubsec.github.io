@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A staged birthday moment for Anupa Shrestha.">
+  <title>Anupa's Birthday Room</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/celebration.css">
+</head>
+<body>
+  <main class="celebration-stage">
+    <div class="stage-glow" aria-hidden="true"></div>
+    <header class="stage-header"><a href="anupa.html">← Back to the editorial</a><span>Bhadra 28 / 2083</span></header>
+    <audio id="backgroundMusic" loop preload="auto" src="assets/audio/hbd.mp3"></audio>
+    <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false"><span class="music-dot" aria-hidden="true"></span><span id="musicLabel">Play the birthday soundtrack</span></button>
+    <section class="stage-intro" aria-labelledby="stage-title">
+      <p class="eyebrow">A room built for one special occasion</p>
+      <h1 id="stage-title">Happy birthday,<br><em>Anupa.</em></h1>
+      <p class="stage-deck">A few small switches. One very deserving birthday.</p>
+      <div class="progress-line" aria-label="Celebration progress"><span id="progress"></span></div>
+    </section>
+
+    <section class="reveal-area" aria-live="polite">
+      <div class="light-grid" id="lightGrid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="name-banner" id="balloonRow" aria-hidden="true">
+        <span class="banner-tail banner-tail-left" aria-hidden="true"></span>
+        <div class="banner-letters"><span>A</span><span>N</span><span>U</span><span>P</span><span>A</span></div>
+        <span class="banner-tail banner-tail-right" aria-hidden="true"></span>
+      </div>
+      <div class="cake-wrap" id="cakeWrap" aria-hidden="true"><div class="cake"><span class="candle"><i></i></span><b></b><strong></strong></div></div>
+      <p class="reveal-message" id="revealMessage">Start the little celebration.</p>
+    </section>
+
+    <div class="controls" role="group" aria-label="Birthday reveal controls">
+      <button class="control active" id="lightsButton" type="button">Turn on the lights</button>
+      <button class="control" id="balloonsButton" type="button">Bring in the name</button>
+      <button class="control" id="cakeButton" type="button">Set the cake</button>
+      <button class="control" id="candleButton" type="button">Light the candle</button>
+      <button class="control" id="messageButton" type="button">Read the birthday note</button>
+    </div>
+
+    <section class="birthday-note" id="birthdayNote" hidden>
+      <p class="eyebrow">The note</p>
+      <h2>For the next chapter.</h2>
+      <p>Fifteen is a good age for questions, plans, experiments, and the occasional perfectly timed sarcastic remark. Keep your ambition. Keep making things. Keep studying hard. Keep your own way of talking.</p>
+      <p>You are already becoming someone with a strong mind and a lot of possibility. This is just a small pause to celebrate that.</p>
+      <p class="signature">Happy birthday, Anupa.<br>May Bhadra 28, 2083 be a bright one.</p>
+    </section>
+  </main>
+  <script src="js/celebration.js"></script>
+</body>
+</html>
